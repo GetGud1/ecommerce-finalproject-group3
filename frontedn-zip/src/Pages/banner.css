@@ -1,0 +1,134 @@
+
+.banner{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img{
+    margin-top: -25%;
+    width: 100%;
+}
+
+.banner h1{
+    color: white;
+    z-index: 99;
+}
+
+.height {
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -5rem;
+  }
+
+
+  
+  /* Bottom right text */
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 70%;
+  }
+  .text-block h1{
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  .text-block h1 span:hover{
+    color: tomato;
+    transition: .2s ease-in;
+  }
+
+  .text-block a{
+    font-size: 2.5rem;
+  }
+
+  .imagestyle{
+    width: 100%;
+  }
+
+  
+
+
+  
+  /* Styles for screens with a minimum width of 1200px */
+  @media screen and (max-width: 1200px) {
+    .text-block {
+        top: 60%;
+      }
+  }
+
+  @media screen and (max-width: 980px) {
+    .text-block {
+        top: 50%;
+      }
+      .bannerSection{
+        margin-top: -10%;
+      }
+    /* Add more styles for smaller screens */
+  }
+
+  @media screen and (max-width: 880px) {
+    .text-block {
+        top: 40%;
+      }
+      .bannerSection{
+        margin-top: -15%;
+      }
+    /* Add more styles for smaller screens */
+  }
+
+  @media screen and (max-width: 780px) {
+    .text-block {
+        top: 35%;
+      }
+      .text-block a{
+        font-size: 2rem;
+      }
+      .text-block h1{
+        font-size: 4rem;
+      }
+      .bannerSection{
+        margin-top: -35%;
+      }
+    /* Add more styles for smaller screens */
+  }
+
+  @media screen and (max-width: 680px) {
+    .text-block {
+        top: 30%;
+      }
+      .text-block a{
+        font-size: 1.8rem;
+      }
+      .text-block h1{
+        font-size: 3.8rem;
+      }
+      .bannerSection{
+        margin-top: -55%;
+      }
+    /* Add more styles for smaller screens */
+  }
+
+  @media screen and (max-width: 580px) {
+    .text-block {
+        top: 25%;
+      }
+      .text-block a{
+        font-size: 1.6rem;
+      }
+      .text-block h1{
+        font-size: 3.5rem;
+      }
+      .bannerSection{
+        margin-top: -70%;
+      }
+    /* Add more styles for smaller screens */
+  }
+

@@ -1,0 +1,310 @@
+[
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71gluQqwAYL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/81AqLXYEYJL._MCnd_AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/61J2YWfGrXL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71L2o5USRtL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71kD4kZQYtL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/91ajD858viL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/61aK5WXwBCL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/61tBOvfc9XL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/61TprfZQHJL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b75241a802b3d1aaf0275"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71TBbWD8AmL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71YB4Pfzd2L._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "OutdoorGear",
+        "title": "Men's Waterproof Jacket",
+        "color": "Black",
+        "discountedPrice": 79.99,
+        "price": 99.99,
+        "discountPersent": 20,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b73121a802b3d1aaf0212"
+        },
+        "description": "Stay dry and protected with this waterproof jacket. Made with high-quality materials, it's perfect for outdoor adventures in any weather."
+    }
+]

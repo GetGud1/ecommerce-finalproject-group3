@@ -1,0 +1,956 @@
+{
+	"info": {
+		"_postman_id": "91a1d36a-e5a1-4bd4-a0cb-7e158aea4c9c",
+		"name": "Ecommerce Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sing Up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Ashok\",\r\n    \"lastName\":\"Code\",\r\n    \"email\":\"codewithzosh@gmail.com\",\r\n    \"password\":\"12345678\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/admin/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"admin",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sita@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ6b3MgYWNhZGVteSIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoidmluYXlha0BnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IiIsImlhdCI6MTY3NjcwMDY2NiwiZXhwIjoxNjc3MTAwNjY2fQ.dkR0Hx7oJzV5hCA4AKR7C9HXihOZjf4TZSIRyHhxTAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state\":\"Gujarat\",\r\n    \"city\":\"Ahemdabad\",\r\n    \"pincode\":\"36001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/user/new_address/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"user",
+						"new_address",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODQyMjg4ODIsImV4cCI6MTY4NDMxNTI4MiwiZW1haWwiOiJ2YWtocmFuQGdtYWlsLmNvbSJ9.QWj3zrCAqqf5zVTtkVmQB11FajyjRMOJuNnxQHcJiyA7ny21dB0I9_itErNIsxp-",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"imageUrl\": \"https://rukminim2.flixcart.com/image/612/612/l1v1uvk0/dress/g/l/k/xl-maxi-11-fabflee-original-imagdc44wsqjz47b.jpeg?q=70\",\r\n        \"brand\": \"Majestic Women\",\r\n        \"title\": \"women Printed Pure Cotton Straight Kurta\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 86,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Women\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"women_dress\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/admin/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"admin",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/users/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/products?color=&size=&minPrice=0&maxPrice=10000&minDiscount=0&category=men_jeans&stock=null&sort=price_high&pageNumber=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": ""
+						},
+						{
+							"key": "size",
+							"value": ""
+						},
+						{
+							"key": "minPrice",
+							"value": "0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "10000"
+						},
+						{
+							"key": "minDiscount",
+							"value": "0"
+						},
+						{
+							"key": "category",
+							"value": "men_jeans"
+						},
+						{
+							"key": "stock",
+							"value": "null"
+						},
+						{
+							"key": "sort",
+							"value": "price_high"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODM3MDQ1MjEsImV4cCI6MTY4Mzc5MDkyMSwiZW1haWwiOiJ2aW5heWFrQGdtYWlsLmNvbSJ9.3UiUdr7itCOdfcIVGcLp_PAty1WLCt5SHgIOYQOfpMuotnKfnjQT_yJ0aCcp5fZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/products/search?q=kurtis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "kurtis"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/products?category=\"mens_kurta\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "\"mens_kurta\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find product by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/products/id/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"products",
+						"id",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add item to cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"64c22cee54db484b7444a7d8\",\r\n    \"size\":\"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Cart Item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/cart_items/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"cart_items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update cartitem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODM3OTQ1MTcsImV4cCI6MTY4Mzg4MDkxNywiZW1haWwiOiJ2YWtocmFuQGdtYWlsLmNvbSJ9.RVQcHitgbeiEk-unULel9I1avkYVmq-89HlXmst86CwDLapYDipZGN07qTzVxLff",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/cart_items/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"cart_items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Virans\",\r\n  \"lastName\": \"Arora\",\r\n  \"streetAddress\": \"123 Main St\",\r\n  \"city\": \"Anytown\",\r\n  \"state\": \"CA\",\r\n  \"zipCode\": \"12345\",\r\n  \"mobile\": \"555-555-1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create payment link",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/payments/64c252e0ec2b65654a755ca2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"payments",
+						"64c252e0ec2b65654a755ca2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch paymnet details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODM3OTQ1MTcsImV4cCI6MTY4Mzg4MDkxNywiZW1haWwiOiJ2YWtocmFuQGdtYWlsLmNvbSJ9.RVQcHitgbeiEk-unULel9I1avkYVmq-89HlXmst86CwDLapYDipZGN07qTzVxLff",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/payments?payment_id=pay_LogMAJC5zeRKDr&order_id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"payments"
+					],
+					"query": [
+						{
+							"key": "payment_id",
+							"value": "pay_LogMAJC5zeRKDr"
+						},
+						{
+							"key": "order_id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Order History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/orders/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"orders",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find order by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}api/orders/64c39d48d5a97cba12bfc428",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"orders",
+						"64c39d48d5a97cba12bfc428"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODgzNjc4ODUsImV4cCI6MTY4ODQ1NDI4NSwiZW1haWwiOiJyYWFtQGdtYWlsLmNvbSJ9.kkM-IcQ7aOpyf8i62CEfcKhEWtrgAV5JySHpKbCEEfXaqnAYETMBMGmPuRKCTb6A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70\",\r\n        \"brand\": \"LAHEJA\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kmns7m80/jean/9/5/o/36-black-36-coper-buck-original-imagfg9edbsneu2s.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 898,\r\n        \"price\": 2399,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/z/n/u/32-ecskn-01bb-002-spykar-original-imaghxqwuw67ywfy.jpeg?q=70\",\r\n        \"brand\": \"Spykar\",\r\n        \"title\": \"Men Skinny Low Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1099,\r\n        \"price\": 2799,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/a/w/t/30-ud0030-united-denim-original-imagf9n9efexz68u-bb.jpeg?q=70\",\r\n        \"brand\": \"UNITED DENIM\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 429,\r\n        \"price\": 1749,\r\n        \"discountPersent\": 75 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/ky0g58w0/shopsy-jean/8/p/y/28-black-knee-cut-jeans-comfits-original-imagaccjjya9gqzn.jpeg?q=70\",\r\n        \"brand\": \"comfits\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 399,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kwfaj680/jean/3/c/s/38-hljn001891-highlander-original-imag93tpnjyyvpkg.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Tapered Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 701,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/2/q/g/30-jeans-kneecut-black-crishtaliyo-2fashion-original-imagqy6gzmpwqkge.jpeg?q=70\",\r\n        \"brand\": \"Crishtaliyo 2fashion\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 494,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 72 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-jean/k/v/m/30-shopsy-black-30-coper-buck-original-imag57w8xmhgkhrf.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 898,\r\n        \"price\": 2399,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfoapow0-0/jean/w/o/d/30-000877-highlander-original-imafw2hyqbj3bsph.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Tapered Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 610,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 53 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/r/a/b/38-eps-black-03-urbano-fashion-original-imaghkgk27whjcej.jpeg?q=70\",\r\n        \"brand\": \"Urbano Fashion\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 699,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 50 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/p/f/30-jk2-mjrp-02-zaysh-original-imagqgf6yh4gtwhx.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 380,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/r/3/o/30-black-1-coper-buck-original-imagqtmaknsqh34z.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 799,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 68 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/o/s/7/28-pbwc-001-qarsh-original-imagh8cfhc3dreq8.jpeg?q=70\",\r\n        \"brand\": \"QARSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 410,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 77 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/d/s/c/36-mj-bk-pl-48-comfits-original-imagqbrnyjfzhs8v.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 349,\r\n        \"price\": 1099,\r\n        \"discountPersent\": 68 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/0/x/32-lrdncslpw68549-louis-philippe-original-imagkca2jxzmb9ya.jpeg?q=70\",\r\n        \"brand\": \"LOUIS PHILIPPE\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1799,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 42 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/6/y/c/30-kcbwc-002-qarsh-original-imagh6fkdxzeaqc8.jpeg?q=70\",\r\n        \"brand\": \"QARSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 430,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 76 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/n/a/k/30-jk-jog02-zaysh-original-imag4bez9hhqvehx-bb.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Jogger Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 400,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/q/i/p/28-beige-jeans-bt008-laheja-original-imagqqbt4kxduwka.jpeg?q=70\",\r\n        \"brand\": \"LAHEJA\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/u/q/f/28-lnbwp006-linaria-original-imagzudybdz3ahm5.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfmv9u80-0/jean/u/v/3/34-hljn000771-highlander-original-imafwfj7yznyezyq.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 721,\r\n        \"price\": 1849,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/0/8/j/28-4jk-jog-zaysh-original-imag4fymxqj7x4zf-bb.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Jogger Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 429,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/e/m/o/32-vje0123bkslmh043-veirdo-original-imagnggzasqfhvyg.jpeg?q=70\",\r\n        \"brand\": \"Veirdo\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kzd147k0/jean/z/x/c/32-j3198701by-calvin-klein-jeans-original-imagbe438rndmq6x.jpeg?q=70\",\r\n        \"brand\": \"Calvin Klein Jeans\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 4399,\r\n        \"price\": 7999,\r\n        \"discountPersent\": 45 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/g/q/f/28-7139482-roadster-original-imafgmr5xpgfmjbm-bb.jpeg?q=70\",\r\n        \"brand\": \"Roadster\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 660,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/3/e/3/28-r-067-styzon-original-imagggqtnfpaurqf.jpeg?q=70\",\r\n        \"brand\": \"Styzon\",\r\n        \"title\": \"Men Boyfriend Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 739,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 58 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/jsaocy80/jean/3/y/h/36-4451377-roadster-original-imafdwmrjyfghdf5.jpeg?q=70\",\r\n        \"brand\": \"Roadster\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 561,\r\n        \"price\": 1699,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/w/x/e/34-black-00010-stylophile-original-imagpbjm2xhcfyt2.jpeg?q=70\",\r\n        \"brand\": \"stylophile\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 40 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l2p23rk0/jean/c/d/c/32-mdnm00169-black-cantabil-original-imagdzc7puqhsh47.jpeg?q=70\",\r\n        \"brand\": \"CANTABIL\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/u/q/f/28-lnbwp006-linaria-original-imagzudybdz3ahm5.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/x/f/x/28-suplpsjeanwhithr-black-supernova-inc-original-imagm6ruxyfaxeef.jpeg?q=70\",\r\n        \"brand\": \"Supernova Inc.\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 64 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/j/w/p/38-vje0123bkslmm042-veirdo-original-imagngkdqasgsbjh.jpeg?q=70\",\r\n        \"brand\": \"Veirdo\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l55nekw0/jean/h/4/u/36-mdnm00160-black-cantabil-original-imagfw5adg5fq2se.jpeg?q=70\",\r\n        \"brand\": \"CANTABIL\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1149,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/s/a/x/34-suplpsjeanblathr-black-supernova-inc-original-imagm6rsbaghtf5y.jpeg?q=70\",\r\n        \"brand\": \"Supernova Inc.\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 64 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/5/r/d/-original-imagq2q3djvzxwzz.jpeg?q=70\",\r\n        \"brand\": \"LEVI'S\",\r\n        \"title\": \"Men Skinny Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 2099,\r\n        \"price\": 3999,\r\n        \"discountPersent\": 48 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/w/b/i/36-lnbwp003-linaria-original-imagzu9bhj98echw.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/k70spzk0/jean/f/a/g/30-hljn000765-highlander-original-imafpchx9c2gdxks.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 662,\r\n        \"price\": 1699,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l23mhzk0/shopsy-jean/o/b/l/34-0djemay16maglightblue-sk-original-imagdgqb9eswy2ac.jpeg?q=70\",\r\n        \"brand\": \"0-DEGREE\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 916,\r\n        \"price\": 3999,\r\n        \"discountPersent\": 77 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/z/q/h/42-blaze-black-studio-nexx-original-imafwfj8exeuwsy5-bb.jpeg?q=70\",\r\n        \"brand\": \"STUDIO NEXX\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 739,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 50 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/n/l/c/42-hljn002845-highlander-original-imagz6y7fyaqhgw3.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Plus Size Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 697,\r\n        \"price\": 2249,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfmv9u80-0/jean/e/9/e/36-hljn000670-highlander-original-imafwfj6zhxw39wg.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 721,\r\n        \"price\": 1849,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/admin/products/creates",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"admin",
+						"products",
+						"creates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE2ODQyMjg4ODIsImV4cCI6MTY4NDMxNTI4MiwiZW1haWwiOiJ2YWtocmFuQGdtYWlsLmNvbSJ9.QWj3zrCAqqf5zVTtkVmQB11FajyjRMOJuNnxQHcJiyA7ny21dB0I9_itErNIsxp-",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5454/api/admin/orders/2/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"admin",
+						"orders",
+						"2",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create multiple products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/k4d27ww0/shirt/q/w/t/l-el024-el-senor-original-imafnadnjp5pq6tg.jpeg?q=70\",\r\n        \"brand\": \"El Senor\",\r\n        \"title\": \"Men Regular Fit Solid Cut Away Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 299,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 76,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/f/z/l/m-white-formal-youthfirst-original-imagqjdfgwjfwgsb.jpeg?q=70\",\r\n        \"brand\": \"youth first\",\r\n        \"title\": \"Men Regular Fit Solid Curved Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 299,\r\n        \"price\": 899,\r\n        \"discountPersent\": 66,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/i/a/z/4xl-white-vtexx-original-imagnzecssjs3y9g.jpeg?q=70\",\r\n        \"brand\": \"VTEXX\",\r\n        \"title\": \"Men Regular Fit Solid Cut Away Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 299,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 76,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/j/x/v/-original-imaghrnsfvbhrsny.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Checkered Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 879,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 45,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/7/k/2/xl-kcsh-fo-1647-ma-fubar-original-imaghehzpwgjzg2y.jpeg?q=70\",\r\n        \"brand\": \"FUBAR\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 419,\r\n        \"price\": 1648,\r\n        \"discountPersent\": 74,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/x/m/n/40-men-regular-slim-fit-solid-button-down-collar-formal-shirt-original-imagf4mn9zg7qrmf-bb.jpeg?q=70\",\r\n        \"brand\": \"MILDIN\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 399,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 69,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/z/q/n/l-frml-st2-vebnor-original-imagqwyfw9gguwvc.jpeg?q=70\",\r\n        \"brand\": \"VeBNoR\",\r\n        \"title\": \"Men Regular Fit Solid Button Down Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 379,\r\n        \"price\": 1849,\r\n        \"discountPersent\": 79,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/w/0/g/xl-bkchx3-bk-brand-original-imagqfdgf3s6fefd.jpeg?q=70\",\r\n        \"brand\": \"BK BRAND\",\r\n        \"title\": \"Men Regular Fit Checkered Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 498,\r\n        \"price\": 999,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l13whow0/shirt/p/3/a/44-dbhs1703-01-3bros-original-imagcr4fhjtjcyqw.jpeg?q=70\",\r\n        \"brand\": \"3BROS\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 799,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/5/7/k/m-dbfs1703-01-3bros-original-imagbghcf5bg3zwm-bb.jpeg?q=70\",\r\n        \"brand\": \"3BROS\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 72,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l3t2fm80/shirt/k/q/h/l-r-white-stoneberg-original-imageum3rhbkphxd.jpeg?q=70\",\r\n        \"brand\": \"STONEBERG\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 409,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 74,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/ksdjma80/shirt/f/2/i/xl-men-solid-casual-shirt-refresh-original-imag5ymxgwqgx62k.jpeg?q=70\",\r\n        \"brand\": \"Refresh\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 449,\r\n        \"price\": 999,\r\n        \"discountPersent\": 55,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/d/d/y/-original-imagp8qe6mzhmydv.jpeg?q=70\",\r\n        \"brand\": \"ARROW\",\r\n        \"title\": \"Men Slim Fit Self Design Cut Away Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 949,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 62,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/j/b/f/40-peshwnupy62747-peter-england-original-imagpzhh3kvah5ut.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Checkered Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/l/j/u/40-vhsflcufm32037-van-heusen-original-imaggb9fhs7rfggd.jpeg?q=70\",\r\n        \"brand\": \"VAN HEUSEN\",\r\n        \"title\": \"Men Regular Fit Checkered Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 1099,\r\n        \"price\": 2799,\r\n        \"discountPersent\": 62,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/u/e/j/40-aradosh1241-arrow-original-imagp7tyb6kkzzem.jpeg?q=70\",\r\n        \"brand\": \"ARROW\",\r\n        \"title\": \"Men Slim Fit Printed Cut Away Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 911,\r\n        \"price\": 2399,\r\n        \"discountPersent\": 62,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/2/5/5/m-hs-printed-3bros-original-imaggxfcyyb8ggcw.jpeg?q=70\",\r\n        \"brand\": \"3BROS\",\r\n        \"title\": \"Men Regular Fit Printed Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 72,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/t/l/y/s-523299-v-mart-original-imagjyhuccmdw98h.jpeg?q=70\",\r\n        \"brand\": \"V-MART\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 960,\r\n        \"discountPersent\": 16,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kxf0jgw0/shirt/l/p/v/42-pesfonubc93225-peter-england-original-imag9vp36vthbdbq.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 719,\r\n        \"price\": 1199,\r\n        \"discountPersent\": 40,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/0/h/v/40-peshwnufw80868-peter-england-original-imagpmdjdpj9rdzc.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Checkered Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kxrvi4w0/shirt/s/f/5/l-nvk-mand-nivick-original-imaga5qasjycs4ey.jpeg?q=70\",\r\n        \"brand\": \"NIVICK\",\r\n        \"title\": \"Men Slim Fit Solid Mandarin Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 66,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/b/v/p/xl-jiodfgvmnjioefkllklhndgv-pockman-original-imagphvmxtgrbcga.jpeg?q=70\",\r\n        \"brand\": \"UNICONIC\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"whitePack of 2\",\r\n        \"discountedPrice\": 799,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 46,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/g/b/b/xl-kcsh-mln-1647-wh-fubar-original-imagmpn3bhqckxvj.jpeg?q=70\",\r\n        \"brand\": \"FUBAR\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 419,\r\n        \"price\": 1648,\r\n        \"discountPersent\": 74,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/n/b/d/-original-imagz3jbhdvxfpkp.jpeg?q=70\",\r\n        \"brand\": \"ARROW\",\r\n        \"title\": \"Men Slim Fit Checkered Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 949,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 62,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/l/k/9/40-pesfoslh871453-peter-england-original-imagp9zeq4yfdyzc.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Slim Fit Printed Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 799,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/i/k/g/44-vhsfbslbe51125-van-heusen-original-imaggav5mhzg359d.jpeg?q=70\",\r\n        \"brand\": \"VAN HEUSEN\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 149,\r\n        \"price\": 2599,\r\n        \"discountPersent\": 45,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/d/u/z/42-7176-don-vino-original-imagzdwbntyrbhuf.jpeg?q=70\",\r\n        \"brand\": \"Don Vino\",\r\n        \"title\": \"Men Regular Fit Striped Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 649,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 56,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l13whow0/shirt/p/3/a/44-dbhs1703-01-3bros-original-imagcr4fhjtjcyqw.jpeg?q=70\",\r\n        \"brand\": \"3BROS\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 990,\r\n        \"discountPersent\": 50,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/b/8/l/40-pesfwslp166652-peter-england-original-imagppkng4xknhhz.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Slim Fit Solid Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 959,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 40,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l02r1jk0/shirt/3/f/g/l-fbrml-r-fibermill-original-imagbxyujjfqtkyj.jpeg?q=70\",\r\n        \"brand\": \"FIBERMILL\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 399,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 75,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/i/5/1/2xl-regular-thesmoke-original-imagkxegg6bf6hdn.jpeg?q=70\",\r\n        \"brand\": \"THESMOKE\",\r\n        \"title\": \"Men Regular Fit Solid Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 899,\r\n        \"discountPersent\": 40,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l4hcx3k0/shirt/d/5/s/m-th-smok-07-thesmoke-original-imagfdpsya5gghxt.jpeg?q=70\",\r\n        \"brand\": \"THESMOKE\",\r\n        \"title\": \"Men Regular Fit Solid Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 620,\r\n        \"price\": 699,\r\n        \"discountPersent\": 37,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/a/p/f/-original-imaghrnsmt48qmfm.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 751,\r\n        \"price\": 1599,\r\n        \"discountPersent\": 53,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/x/a/j/50-araesh0081-arrow-original-imaghszdnwydngzu.jpeg?q=70\",\r\n        \"brand\": \"ARROW\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 919,\r\n        \"price\": 2299,\r\n        \"discountPersent\": 60,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/u/o/c/40-pesfonub175471-peter-england-original-imagm5zqbwuhpy3j.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 719,\r\n        \"price\": 1199,\r\n        \"discountPersent\": 40,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/z/k/b/40-k10k1105590g0-calvin-klein-jeans-original-imagga3egpkyhxbh.jpeg?q=70\",\r\n        \"brand\": \"Calvin Klein Jeans\",\r\n        \"title\": \"Men Slim Fit Striped Button Down Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 4499,\r\n        \"price\": 5999,\r\n        \"discountPersent\": 25,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l15bxjk0/shirt/0/m/v/s-nvk-mand-nivick-original-imagcrw6hxz2ye7r.jpeg?q=70\",\r\n        \"brand\": \"NIVICK\",\r\n        \"title\": \"Men Slim Fit Solid Mandarin Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 66,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/8/a/d/xxl-aone-01-alpesh-original-imagzbnhcrz9dknk.jpeg?q=70\",\r\n        \"brand\": \"Alpesh\",\r\n        \"title\": \"Men Regular Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 420,\r\n        \"price\": 999,\r\n        \"discountPersent\": 57,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/m/b/m/-original-imagn5gt84cx4pgg.jpeg?q=70\",\r\n        \"brand\": \"VAN HEUSEN\",\r\n        \"title\": \"Men Slim Fit Checkered Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 1099,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 47,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kxrvi4w0/shirt/v/k/d/38-pesfoslb493283-peter-england-original-imaga5p5shuyv6u5.jpeg?q=70\",\r\n        \"brand\": \"PETER ENGLAND\",\r\n        \"title\": \"Men Slim Fit Solid Spread Collar Formal Shirt\",\r\n        \"color\": \"white\",\r\n        \"discountedPrice\": 839,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 40,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"shirt\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5454/api/products/id/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5454",
+					"path": [
+						"api",
+						"products",
+						"id",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://rzp.io/i/K1kwudW1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rzp.io/i/K1kwudW1",
+					"protocol": "https",
+					"host": [
+						"rzp",
+						"io"
+					],
+					"path": [
+						"i",
+						"K1kwudW1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user order history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}api/orders/user",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"orders",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70\",\r\n        \"brand\": \"LAHEJA\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kmns7m80/jean/9/5/o/36-black-36-coper-buck-original-imagfg9edbsneu2s.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 898,\r\n        \"price\": 2399,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/z/n/u/32-ecskn-01bb-002-spykar-original-imaghxqwuw67ywfy.jpeg?q=70\",\r\n        \"brand\": \"Spykar\",\r\n        \"title\": \"Men Skinny Low Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1099,\r\n        \"price\": 2799,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/a/w/t/30-ud0030-united-denim-original-imagf9n9efexz68u-bb.jpeg?q=70\",\r\n        \"brand\": \"UNITED DENIM\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 429,\r\n        \"price\": 1749,\r\n        \"discountPersent\": 75 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/ky0g58w0/shopsy-jean/8/p/y/28-black-knee-cut-jeans-comfits-original-imagaccjjya9gqzn.jpeg?q=70\",\r\n        \"brand\": \"comfits\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 399,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kwfaj680/jean/3/c/s/38-hljn001891-highlander-original-imag93tpnjyyvpkg.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Tapered Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 701,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/2/q/g/30-jeans-kneecut-black-crishtaliyo-2fashion-original-imagqy6gzmpwqkge.jpeg?q=70\",\r\n        \"brand\": \"Crishtaliyo 2fashion\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 494,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 72 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-jean/k/v/m/30-shopsy-black-30-coper-buck-original-imag57w8xmhgkhrf.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 898,\r\n        \"price\": 2399,\r\n        \"discountPersent\": 62 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfoapow0-0/jean/w/o/d/30-000877-highlander-original-imafw2hyqbj3bsph.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Tapered Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 610,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 53 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/r/a/b/38-eps-black-03-urbano-fashion-original-imaghkgk27whjcej.jpeg?q=70\",\r\n        \"brand\": \"Urbano Fashion\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 699,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 50 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/p/f/30-jk2-mjrp-02-zaysh-original-imagqgf6yh4gtwhx.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 380,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/r/3/o/30-black-1-coper-buck-original-imagqtmaknsqh34z.jpeg?q=70\",\r\n        \"brand\": \"COPER BUCK\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 799,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 68 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/o/s/7/28-pbwc-001-qarsh-original-imagh8cfhc3dreq8.jpeg?q=70\",\r\n        \"brand\": \"QARSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 410,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 77 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/d/s/c/36-mj-bk-pl-48-comfits-original-imagqbrnyjfzhs8v.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 349,\r\n        \"price\": 1099,\r\n        \"discountPersent\": 68 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/0/x/32-lrdncslpw68549-louis-philippe-original-imagkca2jxzmb9ya.jpeg?q=70\",\r\n        \"brand\": \"LOUIS PHILIPPE\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1799,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 42 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/6/y/c/30-kcbwc-002-qarsh-original-imagh6fkdxzeaqc8.jpeg?q=70\",\r\n        \"brand\": \"QARSH\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 430,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 76 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/n/a/k/30-jk-jog02-zaysh-original-imag4bez9hhqvehx-bb.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Jogger Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 400,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/q/i/p/28-beige-jeans-bt008-laheja-original-imagqqbt4kxduwka.jpeg?q=70\",\r\n        \"brand\": \"LAHEJA\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 599,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 70 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/u/q/f/28-lnbwp006-linaria-original-imagzudybdz3ahm5.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfmv9u80-0/jean/u/v/3/34-hljn000771-highlander-original-imafwfj7yznyezyq.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 721,\r\n        \"price\": 1849,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/0/8/j/28-4jk-jog-zaysh-original-imag4fymxqj7x4zf-bb.jpeg?q=70\",\r\n        \"brand\": \"ZAYSH\",\r\n        \"title\": \"Men Jogger Fit Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 429,\r\n        \"price\": 1299,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/e/m/o/32-vje0123bkslmh043-veirdo-original-imagnggzasqfhvyg.jpeg?q=70\",\r\n        \"brand\": \"Veirdo\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kzd147k0/jean/z/x/c/32-j3198701by-calvin-klein-jeans-original-imagbe438rndmq6x.jpeg?q=70\",\r\n        \"brand\": \"Calvin Klein Jeans\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 4399,\r\n        \"price\": 7999,\r\n        \"discountPersent\": 45 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/g/q/f/28-7139482-roadster-original-imafgmr5xpgfmjbm-bb.jpeg?q=70\",\r\n        \"brand\": \"Roadster\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 660,\r\n        \"price\": 1999,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/3/e/3/28-r-067-styzon-original-imagggqtnfpaurqf.jpeg?q=70\",\r\n        \"brand\": \"Styzon\",\r\n        \"title\": \"Men Boyfriend Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 739,\r\n        \"price\": 1799,\r\n        \"discountPersent\": 58 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/jsaocy80/jean/3/y/h/36-4451377-roadster-original-imafdwmrjyfghdf5.jpeg?q=70\",\r\n        \"brand\": \"Roadster\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 561,\r\n        \"price\": 1699,\r\n        \"discountPersent\": 66 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/w/x/e/34-black-00010-stylophile-original-imagpbjm2xhcfyt2.jpeg?q=70\",\r\n        \"brand\": \"stylophile\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 40 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l2p23rk0/jean/c/d/c/32-mdnm00169-black-cantabil-original-imagdzc7puqhsh47.jpeg?q=70\",\r\n        \"brand\": \"CANTABIL\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/u/q/f/28-lnbwp006-linaria-original-imagzudybdz3ahm5.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/x/f/x/28-suplpsjeanwhithr-black-supernova-inc-original-imagm6ruxyfaxeef.jpeg?q=70\",\r\n        \"brand\": \"Supernova Inc.\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 64 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/j/w/p/38-vje0123bkslmm042-veirdo-original-imagngkdqasgsbjh.jpeg?q=70\",\r\n        \"brand\": \"Veirdo\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1399,\r\n        \"price\": 2999,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l55nekw0/jean/h/4/u/36-mdnm00160-black-cantabil-original-imagfw5adg5fq2se.jpeg?q=70\",\r\n        \"brand\": \"CANTABIL\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 1149,\r\n        \"price\": 2499,\r\n        \"discountPersent\": 55 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/s/a/x/34-suplpsjeanblathr-black-supernova-inc-original-imagm6rsbaghtf5y.jpeg?q=70\",\r\n        \"brand\": \"Supernova Inc.\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 499,\r\n        \"price\": 1399,\r\n        \"discountPersent\": 64 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/5/r/d/-original-imagq2q3djvzxwzz.jpeg?q=70\",\r\n        \"brand\": \"LEVI'S\",\r\n        \"title\": \"Men Skinny Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 2099,\r\n        \"price\": 3999,\r\n        \"discountPersent\": 48 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/w/b/i/36-lnbwp003-linaria-original-imagzu9bhj98echw.jpeg?q=70\",\r\n        \"brand\": \"linaria\",\r\n        \"title\": \"Men Slim Mid Rise Black, White Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 899,\r\n        \"price\": 1899,\r\n        \"discountPersent\": 52 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/k70spzk0/jean/f/a/g/30-hljn000765-highlander-original-imafpchx9c2gdxks.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 662,\r\n        \"price\": 1699,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/l23mhzk0/shopsy-jean/o/b/l/34-0djemay16maglightblue-sk-original-imagdgqb9eswy2ac.jpeg?q=70\",\r\n        \"brand\": \"0-DEGREE\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 916,\r\n        \"price\": 3999,\r\n        \"discountPersent\": 77 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/z/q/h/42-blaze-black-studio-nexx-original-imafwfj8exeuwsy5-bb.jpeg?q=70\",\r\n        \"brand\": \"STUDIO NEXX\",\r\n        \"title\": \"Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 739,\r\n        \"price\": 1499,\r\n        \"discountPersent\": 50 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/xif0q/jean/n/l/c/42-hljn002845-highlander-original-imagz6y7fyaqhgw3.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Plus Size Men Regular Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 697,\r\n        \"price\": 2249,\r\n        \"discountPersent\": 69 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    },\r\n    {\r\n        \"imageUrl\": \"https://rukminim1.flixcart.com/image/612/612/kfmv9u80-0/jean/e/9/e/36-hljn000670-highlander-original-imafwfj6zhxw39wg.jpeg?q=70\",\r\n        \"brand\": \"HIGHLANDER\",\r\n        \"title\": \"Men Slim Mid Rise Black Jeans\",\r\n        \"color\": \"black\",\r\n        \"discountedPrice\": 721,\r\n        \"price\": 1849,\r\n        \"discountPersent\": 61 ,\r\n        \"size\": [\r\n            {\r\n              \"name\": \"S\",\r\n              \"quantity\": 20\r\n            },\r\n            {\r\n              \"name\": \"M\",\r\n              \"quantity\": 30\r\n            },\r\n            {\r\n              \"name\": \"L\",\r\n              \"quantity\": 50\r\n            }\r\n          ],\r\n          \"quantity\": 100,\r\n          \"topLavelCategory\": \"Men\",\r\n          \"secondLavelCategory\": \"Clothing\",\r\n          \"thirdLavelCategory\": \"men_jeans\",\r\n          \"description\":\"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style.\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/admin/products/",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"admin",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"64c21fb1af9c0a8049f7c9b9\",\r\n    \"review\":\"nice kurta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/reviews/create",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"reviews",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reviews get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}api/reviews/product/64c21fb1af9c0a8049f7c9b9",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"reviews",
+						"product",
+						"64c21fb1af9c0a8049f7c9b9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

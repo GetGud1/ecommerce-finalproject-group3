@@ -1,0 +1,327 @@
+[
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71rsoOyOvYL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/71rmcFAu3jL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/81ksdNCt0WL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/81Lxe4sQrWL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/71P3V7v2V6L._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/91TTogapurL._MCnd_AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/71l6JHhMVYL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/61WXFxnzfWL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/719fama8WDL._MCnd_AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/71D8-yUsOPS._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/61auu2ca+YL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    },{
+        "imageUrl": "https://m.media-amazon.com/images/I/61Gv9R2ocwL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "A C CREATION",
+        "title": "Women Slim Mid Rise Grey Jeans",
+        "color": "gray",
+        "discountedPrice": 474,
+        "price": 1399,
+        "discountPersent": 66 ,
+        "size": [
+            {
+              "name": "S",
+              "quantity": 20
+            },
+            {
+              "name": "M",
+              "quantity": 30
+            },
+            {
+              "name": "L",
+              "quantity": 50
+            }
+          ],
+          "quantity": 100,
+          "category": {
+            "$oid": "663b786f1a802b3d1aaf03a9"
+        },
+          "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
+    }
+]

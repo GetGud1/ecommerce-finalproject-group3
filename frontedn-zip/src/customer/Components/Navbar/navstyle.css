@@ -1,0 +1,19 @@
+
+.signinbtn{
+    color: tomato;
+    font-size: medium;
+}
+
+.signinbtn:hover{
+    background: tomato;
+    color: white;
+    border-radius: 3px;
+    padding: 2px;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+}
+
+.linkinnit:hover {
+    color: tomato;
+  }
+

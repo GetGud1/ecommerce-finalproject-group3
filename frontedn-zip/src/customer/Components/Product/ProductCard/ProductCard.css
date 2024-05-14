@@ -1,0 +1,20 @@
+.productCard .textPart {
+    transition: transform 0.3s ease-out;
+  }
+.productCard:hover .textPart{
+    transform: translateY(-1rem);
+
+}
+
+.productCard{
+  border-radius: 10px;
+  border: none;
+}
+
+.productCard img{
+  border-radius: 10px;
+}
+
+.productCard:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

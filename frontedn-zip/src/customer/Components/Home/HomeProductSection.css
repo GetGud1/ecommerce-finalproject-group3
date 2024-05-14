@@ -1,0 +1,22 @@
+.alice-carousel__stage-item {
+    
+  }
+  
+.sliderbtn{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  box-shadow: none;
+  background: none;
+  color: tomato;
+}
+
+.sliderbtn:hover{
+  box-shadow: none;
+  background: none;
+}
+
+.sliderbtn:hover .arrow{
+
+}
+

@@ -1,0 +1,226 @@
+[
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71fyw1U54GL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/81Hu9s2UexL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/81-igpWsThL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71tNn38SWbL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71MgCJzQdoL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/61HGXB+AUhL._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/71pi77kB98L._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    },
+    {
+        "imageUrl": "https://m.media-amazon.com/images/I/81yWoFuJXNS._AC_UL480_FMwebp_QL65_.jpg",
+        "brand": "CozyKnits",
+        "title": "Women's Cable Knit Sweater",
+        "color": "Ivory",
+        "discountedPrice": 39.99,
+        "price": 59.99,
+        "discountPersent": 33,
+        "size": [
+            {
+                "name": "S",
+                "quantity": 10
+            },
+            {
+                "name": "M",
+                "quantity": 15
+            },
+            {
+                "name": "L",
+                "quantity": 20
+            }
+        ],
+        "quantity": 45,
+        "category": {
+            "$oid": "663b6dc51a802b3d1aaf01ac"
+        },
+        "description": "Stay warm and stylish with this cozy cable knit sweater. Made from high-quality materials, it features a classic design that never goes out of style. Perfect for chilly days and nights, this sweater is a must-have addition to your wardrobe."
+    }
+]

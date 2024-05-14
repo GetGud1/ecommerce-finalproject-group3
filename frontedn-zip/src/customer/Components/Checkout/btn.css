@@ -1,0 +1,65 @@
+
+.button{
+    background: tomato;
+    height: 2rem;
+    width: 7.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background: rgb(253, 77, 45);
+    transition: .2s ease-in-out;
+}
+
+.btn{
+    background: tomato;
+    padding: .8rem 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    color: white;
+    background: rgb(255, 73, 41);
+    transition: .2s ease-in-out;
+}
+
+.buttoninnit{
+    background: tomato;
+    top: 100%;
+    padding: 1rem 5rem;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+}
+
+.buttoninnit:hover{
+    color: white;
+    background: rgb(255, 73, 41);
+    transition: .2s ease-in-out;
+}
+
+.big{
+    padding: ".9rem 1.5rem";
+    background: tomato;
+    height: 3.5rem;
+    width: 15rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.big:hover{
+    background: rgb(253, 77, 45);
+    transition: .2s ease-in-out;
+}
+
+.MuiSvgIcon-root.Mui-active {
+    color: "#1976d2";
+}
+
+.card{
+    height: 100rem;
+}

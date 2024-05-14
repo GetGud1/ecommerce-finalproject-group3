@@ -1,0 +1,23 @@
+.checkout{
+    background: tomato;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+}
+
+.checkout:hover{
+    background: rgb(251, 84, 55);
+}
+
+.color{
+    color: tomato;
+}
+
+.btn{
+    color: tomato;
+}
+
+.btn:hover{
+    color: rgb(251, 72, 41);
+}
