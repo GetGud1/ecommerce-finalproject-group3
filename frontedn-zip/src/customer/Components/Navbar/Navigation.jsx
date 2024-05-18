@@ -262,7 +262,7 @@ export default function Navigation() {
                   <span className="sr-only">Your Company</span>
                   <img
                     src="../images/logos/image.png"
-                    alt="Shopwithzosh"
+                    alt="URBANSHOPPER"
                     className="h-8 w-18 mr-2"
                   />
                 </Link>

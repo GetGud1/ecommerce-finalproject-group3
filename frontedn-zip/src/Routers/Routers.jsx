@@ -9,6 +9,7 @@ import Contact from "../Pages/Contact";
 import Product from "../customer/Components/Product/Product/Product";
 import ProductDetails from "../customer/Components/Product/ProductDetails/ProductDetails";
 import Cart from "../customer/Components/Product/Cart/Cart";
+import Vendor from "../Pages/vendor";
 
 
 import DemoAdmin from "../Admin/Views/DemoAdmin";
@@ -33,6 +34,7 @@ const Routers = () => {
         <Route path="/men" element={<Product/>}></Route>
         <Route path="/product/:productId" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/vendor" element={<Vendor/>}></Route>
 
       
 

@@ -132,3 +132,13 @@
     /* Add more styles for smaller screens */
   }
 
+
+  .augment{
+    height: 50rem;
+    background: black;
+  }
+
+  .heightAR{
+    height: 50rem;
+    width: 100%;
+  }

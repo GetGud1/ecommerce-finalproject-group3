@@ -22,6 +22,16 @@ import Sales from "../Pages/Sales";
 import Trending from "../Pages/Trending";
 import Marketplace from "../Pages/Marketplace";
 import Deals from "../Pages/Deals";
+import Vendor from "../Pages/vendor";
+import Augment from "../Pages/augment";
+import Augment1 from "../Pages/augment1";
+import Augment2 from "../Pages/augment2";
+import Augment3 from "../Pages/augment3";
+import Augment4 from "../Pages/augment4";
+import Augment5 from "../Pages/augment5";
+import Augment6 from "../Pages/augment6";
+import ProductDetailsGlasses from "../customer/Components/Product/ProductDetails/ProductDetailsGlasses";
+import ProductDetailsMP from "../customer/Components/Product/ProductDetails/ProductDetailsMP";
 
 
 
@@ -47,6 +57,7 @@ const CustomerRoutes = () => {
         <Route path="/sales" element={<Sales />}></Route>
         <Route path="/trending" element={<Trending />}></Route>
         <Route path="/marketplace" element={<Marketplace />}></Route>
+        <Route path="/vendor" element={<Vendor />}></Route>
         <Route path="/deals" element={<Deals />}></Route>
         <Route path="/home" element={<Homepage />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -55,12 +66,43 @@ const CustomerRoutes = () => {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/:lavelOne/:lavelTwo/:lavelThree" element={<Product />}></Route>
         <Route path="/product/:productId" element={<ProductDetails />}></Route>
+        <Route path="/productGlasses/:productId" element={<ProductDetailsGlasses />}></Route>
+        <Route path="/productMP/:productId" element={<ProductDetailsMP />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/account/order" element={<Order />}></Route>
         <Route path="/account/order/:orderId" element={<OrderDetails />}></Route>
         <Route path="/account/rate/:productId" element={<RateProduct />}></Route>
         <Route path="/checkout" element={<Checkout />}></Route>
         <Route path="/payment/:orderId" element={<PaymentSuccess />}></Route>
+        <Route path="/augment" element={<Augment />}></Route>
+        <Route path="/augmentSunglasses" element={<Augment1 />}></Route>
+        <Route path="/augmentDress" element={<Augment2 />}></Route>
+        <Route path="/augmentShirt" element={<Augment3 />}></Route>
+        <Route path="/augmentJean" element={<Augment4 />}></Route>
+        <Route path="/augmentSeater" element={<Augment5 />}></Route>
+        <Route path="/augmentJacket" element={<Augment6 />}></Route>
+
+        {/* {productId === "663b87e11a802b3d1aaf045b" && (
+    <a href="/augment">Augmented reality</a>
+  )}
+  {productId === "663b89431a802b3d1aaf0554" && (
+    <a href="/augmentSunglasses">Augmented reality</a>
+  )}
+  {productId === "663b769a1a802b3d1aaf0314" && (
+    <a href="/augmentDress">Augmented reality</a>
+  )}
+  {productId === "663b6bce1a802b3d1aaf012c" && (
+    <a href="/augmentShirt">Augmented reality</a>
+  )}
+  {productId === "663b6d721e5c5114123d8a45" && (
+    <a href="/augmentJean">Augmented reality</a>
+  )}
+  {productId === "663b6dc51a802b3d1aaf01ae" && (
+    <a href="/augmentSeater">Augmented reality</a>
+  )}
+  {productId === "663b74c81e5c5114123f8595" && (
+    <a href="/augmentJacket">Augmented reality</a>
+  )} */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer/>

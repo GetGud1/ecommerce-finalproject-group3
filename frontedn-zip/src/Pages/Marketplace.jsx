@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography } from "@mui/material";
+import { Typography, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import { useEffect } from "react";
 import {
   Grid,
@@ -10,6 +10,23 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
+import { Category } from '@mui/icons-material'; // Import the Category icon from Material-UI Icons
+// import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+// import FaceIcon from '@material-ui/icons/Face';
+// import ComputerIcon from '@material-ui/icons/Computer';
+// import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+// import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
+// import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+// import DriveEtaIcon from '@material-ui/icons/DriveEta';
+// import RoomServiceIcon from '@material-ui/icons/RoomService';
+// import HomeWorkIcon from '@material-ui/icons/HomeWork';
+// import PetsIcon from '@material-ui/icons/Pets';
+// import DeckIcon from '@material-ui/icons/Deck';
+// import WorkIcon from '@material-ui/icons/Work';
+// import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
+
+
 
 import { Fragment } from "react";
 import "./CreateProductForm.css";
@@ -17,90 +34,61 @@ import { useDispatch } from "react-redux";
 import { createProduct } from "../Redux/Customers/Product/Action";
 
 import React from "react";
-import ProductCard from "../customer/Components/Product/ProductCard/ProductCard";
+import ProductCard1 from "../customer/Components/Product/ProductCard/ProductCard1";
 import { productdata } from "./data";
+import MenuIcon from '@mui/icons-material/Menu';
 
 
-const Homepage = () => {
-  // const [ product, setProduct] = useState(null)
 
-  // useEffect(()=>{
-  //   const fetchData = async () =>{
-  //     const response = await fetch('http://localhost:5454/api/products?category=other1')
-  //     const json = await response.json()
+ 
 
-  //     if(response.ok){
-  //       setProduct(json)
-  //       console.log("its the fookin product innit", setProduct)
-  //     }
-  //   }
-
-  // },[])
+const Marketplace = () => {
   
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    
-    const [productData, setProductData] = useState({
-      imageUrl: "",
-      brand: "",
-      title: "",
-      color: "",
-      discountedPrice: "",
-      price: "",
-      discountPersent: "",
+  const handleSidebarToggle = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+  const [productData, setProductData] = useState([]);
 
-      topLavelCategory: "",
-      secondLavelCategory: "",
-      thirdLavelCategory: "",
-      description: "",
-    });
+  useEffect(() => {
+    fetch('http://localhost:5454/api/products?category=other1', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data.content)) {
+          setProductData(data.content); // Update the productData state with the fetched data
+        } else {
+          console.error('Error: Fetched data is not in the expected array format');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []); // Empty dependency array to run the effect only once on mount
 
-
-  const dispatch=useDispatch();
-  const jwt=localStorage.getItem("jwt")
+  const fetchNextPage = () => {
+    const nextPageSize = productData.length + 10; // Increase the pageSize by 1
+    const apiUrl = `http://localhost:5454/api/products?category=other1&pageSize=${nextPageSize}`;
   
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setProductData((prevState) => ({
-        ...prevState,
-        [name]: value,
-      }));
-    };
+    fetch(apiUrl, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data.content)) {
+          setProductData(data.content); // Update the productData state with the fetched data
+        } else {
+          console.error('Error: Fetched data is not in the expected array format');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
   
-    const handleSizeChange = (e, index) => {
-      let { name, value } = e.target;
-      name==="size_quantity"?name="quantity":name=e.target.name;
   
-      const sizes = [...productData.size];
-      sizes[index][name] = value;
-      setProductData((prevState) => ({
-        ...prevState,
-        size: sizes,
-      }));
-    };
-  
-    const handleAddSize = () => {
-      const sizes = [...productData.size];
-      sizes.push({ name: "", quantity: "" });
-      setProductData((prevState) => ({
-        ...prevState,
-        size: sizes,
-      }));
-    };
-  
-    // const handleRemoveSize = (index) => {
-    //   const sizes = [...productData.size];
-    //   sizes.splice(index, 1);
-    //   setProductData((prevState) => ({
-    //     ...prevState,
-    //     size: sizes,
-    //   }));
-    // };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      dispatch(createProduct({data:productData,jwt}))
-      console.log(productData);
-    };
 
 
 
@@ -108,23 +96,214 @@ const Homepage = () => {
 
 
   return (
-    <div className="">
 
+     <div className="">
 
-    <div className="px-10 -z-10">
+<Fragment className="createProductContainer ">
+<Typography
+        variant="h3"
+        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '5%', fontSize: '1.5rem' }}
+        className="py-10 text-center"
+      >
+        <IconButton onClick={handleSidebarToggle} sx={{ marginRight: '0.5rem' }}>
+          <MenuIcon />
+        </IconButton>
+        Categories
+      </Typography>
+      <Drawer anchor="right" open={sidebarOpen} onClose={() => setSidebarOpen(false)}>
+        {/* Sidebar content goes here */}
+        <div style={{ width: '250px' }}>
+        <div style={{ width: '250px' }}>
+          <List>
+            <ListItem button>
+              
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/mensfashion">
+              <ListItemText primary="Mens Fashion" />
+              </a>
+            </ListItem>
 
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/womensfashion">
+              <ListItemText primary="Womens Fashion" />
+              </a>
+            </ListItem>
 
-      {/* bottom part */}
-      <div className="flex justify-between ">
-        {/* filter */}
-        <div className="w-[20%] border rounded-md bg-white"></div>
-        {/* product */}
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/tech">
+              <ListItemText primary="Tech" />
+              </a>
+            </ListItem>
 
-        <div className="flex  flex-wrap justify-between w-[78%] bg-white border p-5 rounded-md">
-          {productdata.map((item) => (
-            <ProductCard product={item} />
-          ))}
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/smartphone">
+              <ListItemText primary="Smartphones" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/games">
+              <ListItemText primary="Games" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/sports">
+              <ListItemText primary="Sports" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/vehicles">
+              <ListItemText primary="Vehicles" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/services">
+              <ListItemText primary="Services" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/properties">
+              <ListItemText primary="Properties" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/pets">
+              <ListItemText primary="Pets" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/furniture">
+              <ListItemText primary="Furniture" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/job">
+              <ListItemText primary="Jobs" />
+              </a>
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Category />
+              </ListItemIcon>
+              <a href="/marketplace/other/other1">
+              <ListItemText primary="Other" />
+              </a>
+            </ListItem>
+            {/* Add more ListItems for other categories */}
+          </List>
         </div>
+        </div>
+      </Drawer>
+      <form
+
+        className="createProductContainer min-h-screen"
+      >
+        <Grid container spacing={2}>
+          
+          <Grid item xs={4} sm={1.5}>
+            <a href="/marketplace/other/properties">
+            <img src="https://i.ibb.co/wNcNKqD/image-2024-05-15-185925386.png" alt="" />
+            </a>
+          </Grid>
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/vehicles">
+            <img src="https://i.ibb.co/8MVsV5f/image-2024-05-15-185359457.png" alt="" />
+            </a>
+          </Grid>
+          
+          
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/services">
+            <img src="https://i.ibb.co/7JdZjkc/image-2024-05-15-185532293.png" alt="" />
+            </a>
+          </Grid>
+
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/smartphones">
+            <img src="https://i.ibb.co/djsd1wh/image-2024-05-15-185619722.png" alt="" />
+            </a>
+          </Grid>
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/womensfashion">
+            <img src="https://i.ibb.co/YNTvQqD/image-2024-05-15-185701610.png" alt="" />
+            </a>
+          </Grid>
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/mensfashion">
+            <img src="https://i.ibb.co/Yp83Zx2/image-2024-05-15-185729914.png" alt="" />
+            </a>
+          </Grid>
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/services">
+            <img src="https://i.ibb.co/By6Srp5/image-2024-05-15-185810986.png" alt="" />
+            </a>
+          </Grid>
+          <Grid item xs={4} sm={1.5}>
+          <a href="/marketplace/other/vehicles">
+            <img src="https://i.ibb.co/8MVsV5f/image-2024-05-15-185359457.png" alt="" />
+            </a>
+          </Grid>
+
+        </Grid>
+      </form>
+    </Fragment>
+
+
+    <div className="margintopinnit">
+      <div className="px-10 -z-10">
+        <div className="flex justify-between">
+          <div className="flex flex-wrap justify-between w-[98%] bg-white border p-5 rounded-md">
+            {productData.map((item) => (
+              <ProductCard1 key={item._id} product={item} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="btnwrapper">
+        <a href="#" className="showMore" onClick={fetchNextPage}>Show more</a>
       </div>
     </div>
 
@@ -140,218 +319,12 @@ const Homepage = () => {
 
 
 
-<Fragment className="createProductContainer ">
-      <Typography
-        variant="h3"
-        sx={{ textAlign: "center" }}
-        className="py-10 text-center "
-      >
-        Add New Product
-      </Typography>
-      <form
-        onSubmit={handleSubmit}
-        className="createProductContainer min-h-screen"
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Image URL"
-              name="imageUrl"
-              value={productData.imageUrl}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              label="Brand"
-              name="brand"
-              value={productData.brand}
-              onChange={handleChange}
-            />
-          </Grid>
-        
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              label="Title"
-              name="title"
-              value={productData.title}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              label="Color"
-              name="color"
-              value={productData.color}
-              onChange={handleChange}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              label="Quantity"
-              name="quantity"
-              value={productData.quantity}
-              onChange={handleChange}
-              type="number"
-            />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              label="Price"
-              name="price"
-              value={productData.price}
-              onChange={handleChange}
-              type="number"
-            />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              label="Discounted Price"
-              name="discountedPrice"
-              value={productData.discountedPrice}
-              onChange={handleChange}
-              type="number"
-            />
-          </Grid>
-          
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              label="Discount Percentage"
-              name="discountPersent"
-              value={productData.discountPersent}
-              onChange={handleChange}
-              type="number"
-            />
-          </Grid>
-          <Grid item xs={6} sm={4}>
-            <FormControl fullWidth>
-              <InputLabel>Top Level Category</InputLabel>
-              <Select
-                name="topLavelCategory"
-                value={productData.topLavelCategory}
-                onChange={handleChange}
-                label="Top Level Category"
-              >
-                <MenuItem value="marketplace">Marketplace</MenuItem>
 
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={6} sm={4}>
-            <FormControl fullWidth>
-              <InputLabel>Second Level Category</InputLabel>
-              <Select
-                name="secondLavelCategory"
-                value={productData.secondLavelCategory}
-                onChange={handleChange}
-                label="Second Level Category"
-              >
-                <MenuItem value="mens_mp">Men</MenuItem>
-                <MenuItem value="womens_mp">Women</MenuItem>
-                <MenuItem value="accessories_mp">Accessories</MenuItem>
-                <MenuItem value="other">Other</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={6} sm={4}>
-            <FormControl fullWidth>
-              <InputLabel>Third Level Category</InputLabel>
-              <Select
-                name="thirdLavelCategory"
-                value={productData.thirdLavelCategory}
-                onChange={handleChange}
-                label="Third Level Category"
-              >
-                <MenuItem value="mensfashion">Mens fashion</MenuItem>
-                <MenuItem value="womensfashion">Womens fashion</MenuItem>
-                <MenuItem value="tech">Tech</MenuItem>
-                <MenuItem value="smartphone">Smartphones</MenuItem>
 
-                <MenuItem value="games">Games</MenuItem>
-                <MenuItem value="sports">Sports</MenuItem>                
-                <MenuItem value="vehicles">Vehicles</MenuItem>
-                <MenuItem value="services">Services</MenuItem>
-                <MenuItem value="properties">Properties</MenuItem>
-
-                <MenuItem value="pets">Pets</MenuItem>
-                <MenuItem value="furniture">Furniture</MenuItem>                
-                <MenuItem value="job">Jobs</MenuItem>
-                <MenuItem value="other">Other</MenuItem>
-
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              id="outlined-multiline-static"
-              label="Description"
-              multiline
-              name="description"
-              rows={3}
-              onChange={handleChange}
-              value={productData.description}
-            />
-          </Grid>
-          {/* {productData.size.map((size, index) => (
-            <Grid container item spacing={3} >
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Size Name"
-                  name="name"
-                  value={size.name}
-                  onChange={(event) => handleSizeChange(event, index)}
-                  required
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Quantity"
-                  name="size_quantity"
-                  type="number"
-                  onChange={(event) => handleSizeChange(event, index)}
-                  required
-                  fullWidth
-                />
-              </Grid> </Grid>
-            
-          ))} */}
-          <Grid item xs={12} >
-            <Button
-              variant="contained"
-              sx={{ p: 1.8 }}
-              className="py-20"
-              size="large"
-              type="submit"
-            >
-              Add New Product
-            </Button>
-            {/* <Button
-              variant="contained"
-              sx={{ p: 1.8 }}
-              className="py-20 ml-10"
-              size="large"
-              onClick={()=>handleAddProducts(dressPage1)}
-            >
-              Add Products By Loop
-            </Button> */}
-          </Grid>
-        </Grid>
-      </form>
-    </Fragment>
 
       
     </div>
   );
 };
 
-export default Homepage;
+export default Marketplace;

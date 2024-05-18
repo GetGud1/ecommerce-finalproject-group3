@@ -3,3 +3,29 @@
     padding: 0rem 5rem;
     
 }
+
+.margintopinnit{
+    margin-top: 5%;
+}
+
+.btnwrapper {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showMore {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+}
+
+
+.showMore:hover {
+    border: 1.2px solid tomato;
+    color: tomato;
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}

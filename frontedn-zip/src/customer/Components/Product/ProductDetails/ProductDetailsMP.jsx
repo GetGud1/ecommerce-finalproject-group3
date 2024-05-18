@@ -12,7 +12,6 @@ import { getAllReviews } from "../../../../Redux/Customers/Review/Action";
 import { lengha_page1 } from "../../../../Data/Women/LenghaCholi";
 import { gounsPage1 } from "../../../../Data/Gouns/gouns";
 import "./productdetails.css";
-import { Category } from "@mui/icons-material";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -75,7 +74,6 @@ export default function ProductDetails() {
   const { customersProduct,review } = useSelector((store) => store);
   const { productId } = useParams();
   const jwt = localStorage.getItem("jwt");
-  console.log("category", Category)
   // console.log("param",productId,customersProduct.product)
 
   const handleSetActiveImage = (image) => {
@@ -294,29 +292,6 @@ export default function ProductDetails() {
                 >
                   Add To Cart
                 </button>
-                {/* Display the appropriate button based on the product ID */}
-  {productId === "663b87e11a802b3d1aaf045b" && (
-    <a href="/augment">Augmented reality</a>
-  )}
-  {productId === "663b89431a802b3d1aaf0554" && (
-    <a href="/augmentSunglasses">Augmented reality</a>
-  )}
-  {productId === "663b769a1a802b3d1aaf0314" && (
-    <a href="/augmentDress">Augmented reality</a>
-  )}
-  {productId === "663b6bce1a802b3d1aaf012c" && (
-    <a href="/augmentShirt">Augmented reality</a>
-  )}
-  {productId === "663b6d721e5c5114123d8a45" && (
-    <a href="/augmentJean">Augmented reality</a>
-  )}
-  {productId === "663b6dc51a802b3d1aaf01ae" && (
-    <a href="/augmentSeater">Augmented reality</a>
-  )}
-  {productId === "663b74c81e5c5114123f8595" && (
-    <a href="/augmentJacket">Augmented reality</a>
-  )}
-
               </form>
             </div>
 

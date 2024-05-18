@@ -63,7 +63,7 @@ export const navigation = {
       { name: 'Trending', id: '/', href:'/trending' },
       { name: 'Deals', id: '/', href:'/deals' },
       { name: 'Sales', id: '/', href:'/Sales' },
-      { name: 'Become a vendor', id: '/' }
+      { name: 'Upload to Marketplace', id: '/', href:'/vendor' }
     ],
   }
   
