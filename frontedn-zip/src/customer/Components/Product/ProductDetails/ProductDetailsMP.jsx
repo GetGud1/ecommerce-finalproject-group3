@@ -14,12 +14,9 @@ import { gounsPage1 } from "../../../../Data/Gouns/gouns";
 import "./productdetails.css";
 
 const product = {
-  name: "Basic Tee 6-Pack",
-  price: "$996",
-  href: "#",
+
   breadcrumbs: [
-    { id: 1, name: "Men", href: "#" },
-    { id: 2, name: "Clothing", href: "#" },
+    
   ],
   images: [
     {
@@ -178,15 +175,11 @@ export default function ProductDetails() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <div className="flex space-x-5 items-center text-lg lg:text-xl tracking-tight text-gray-900 mt-6">
-                <p className="font-semibold">
-                  ${customersProduct.product?.discountedPrice}
-                </p>
-                <p className="opacity-50 line-through">
+
+                <p className="opacity-80 ">
                   ${customersProduct.product?.price}
                 </p>
-                <p className="text-green-600 font-semibold">
-                  {customersProduct.product?.discountPersent}% Off
-                </p>
+
               </div>
 
               {/* Reviews */}
@@ -201,98 +194,14 @@ export default function ProductDetails() {
                     readOnly
                   />
 
-                  <p className="opacity-60 text-sm">42807 Ratings</p>
+                  <p className="opacity-60 text-sm">6 Ratings</p>
                   <p className="ml-3 text-sm font-medium text-orange-300 hover:text-indigo-500">
                     {reviews.totalCount} reviews
                   </p>
                 </div>
               </div>
 
-              <form className="mt-10" onSubmit={handleSubmit}>
-                {/* Sizes */}
-                <div className="mt-10">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                  </div>
-
-                  <RadioGroup
-                    value={selectedSize}
-                    onChange={setSelectedSize}
-                    className="mt-4"
-                  >
-                    <RadioGroup.Label className="sr-only">
-                      Choose a size
-                    </RadioGroup.Label>
-                    <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-10">
-                      {product.sizes.map((size) => (
-                        <RadioGroup.Option
-                          key={size.name}
-                          value={size}
-                          disabled={!size.inStock}
-                          className={({ active }) =>
-                            classNames(
-                              size.inStock
-                                ? "cursor-pointer bg-white text-gray-900 shadow-sm"
-                                : "cursor-not-allowed bg-gray-50 text-gray-200",
-                              active ? "ring-1 ring-red-300" : "",
-                              "group relative flex items-center justify-center rounded-md border py-1 px-1 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6"
-                            )
-                          }
-                        >
-                          {({ active, checked }) => (
-                            <>
-                              <RadioGroup.Label as="span">
-                                {size.name}
-                              </RadioGroup.Label>
-                              {size.inStock ? (
-                                <span
-                                  className={classNames(
-                                    active ? "border" : "border-2",
-                                    checked
-                                      ? "border-red-300"
-                                      : "border-transparent",
-                                    "pointer-events-none absolute -inset-px rounded-md"
-                                  )}
-                                  aria-hidden="true"
-                                />
-                              ) : (
-                                <span
-                                  aria-hidden="true"
-                                  className="pointer-events-none absolute -inset-px rounded-md border-2 border-gray-200"
-                                >
-                                  <svg
-                                    className="thesvg absolute inset-0 h-full w-full stroke-2 text-gray-200"
-                                    viewBox="0 0 100 100"
-                                    preserveAspectRatio="none"
-                                    stroke="currentColor"
-                                  >
-                                    <line
-                                      x1={0}
-                                      y1={100}
-                                      x2={100}
-                                      y2={0}
-                                      vectorEffect="non-scaling-stroke"
-                                    />
-                                  </svg>
-                                </span>
-                              )}
-                            </>
-                          )}
-                        </RadioGroup.Option>
-                      ))}
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <button
-                  variant="contained"
-                  className="addToCart"
-                  type="submit"
-                  sx={{ padding: ".8rem 2rem", marginTop: "2rem" }}
-                >
-                  Add To Cart
-                </button>
-              </form>
+              
             </div>
 
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -307,21 +216,7 @@ export default function ProductDetails() {
                 </div>
               </div>
 
-              <div className="mt-10">
-                <h3 className="text-sm font-medium text-gray-900">
-                  Highlights
-                </h3>
-
-                <div className="mt-4">
-                  <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                    {product.highlights.map((highlight) => (
-                      <li key={highlight} className="text-gray-400">
-                        <span className="text-gray-600">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              
 
               <div className="mt-10">
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
@@ -330,6 +225,31 @@ export default function ProductDetails() {
                   <p className="text-sm text-gray-600">{product.details}</p>
                 </div>
               </div>
+              <form className="mt-10" >
+                {/* Sizes */}
+                <div className="mt-10">
+
+
+
+                </div>
+
+                <button
+                  variant="contained"
+                  className="addToCart"
+                  type="submit"
+                  sx={{ padding: ".8rem 2rem", marginTop: "2rem" }}
+                >
+                  Chat with the seller
+                </button>
+                <button
+                  variant="contained"
+                  className="addToCart"
+                  type="submit"
+                  sx={{ padding: ".8rem 2rem", marginTop: "2rem" }}
+                >
+                  Send offer
+                </button>
+              </form>
             </div>
           </div>
         </section>
@@ -494,15 +414,7 @@ export default function ProductDetails() {
           </div>
         </section>
 
-        {/* similer product */}
-        <section className="pt-10">
-          <h1 className="py-5 text-xl font-bold">Similar Products</h1>
-            <div className="flex flex-wrap space-y-5">
-              {gounsPage1.slice(0, 6).map((item) => (
-                <HomeProductCard product={item} />
-          ))}
-            </div>
-        </section>
+
 
       </div>
     </div>
