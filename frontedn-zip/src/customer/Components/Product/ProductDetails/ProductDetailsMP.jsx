@@ -12,6 +12,7 @@ import { getAllReviews } from "../../../../Redux/Customers/Review/Action";
 import { lengha_page1 } from "../../../../Data/Women/LenghaCholi";
 import { gounsPage1 } from "../../../../Data/Gouns/gouns";
 import "./productdetails.css";
+import { Avatar } from '@mui/material';
 
 const product = {
 
@@ -91,6 +92,53 @@ export default function ProductDetails() {
 
   // console.log("reviews ",review)
 
+  
+ const  img1 = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+ const  img2= "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+ const  img3 = "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+ const  img4 = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+ const img5 = "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+ const img6 = "https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+ const img7 = "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+ const img8 = "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+
+const u1 = "Walter White";
+const u2 = "Aaron";
+const u3 = "Furqan";
+const u4 = "Honey";
+const u5 = "Haris";
+const u6 = "Pek";
+const u7 = "Random";
+const u8 = "Testing";
+
+
+
+ const getRandomImage = () => {
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const randomIndex = Math.floor(Math.random() * images.length);
+  return images[randomIndex];
+};
+
+const usernames = [u1, u2, u3, u4, u5, u6, u7, u8];
+
+const getRandomUsername = () => {
+  const randomIndex = Math.floor(Math.random() * usernames.length);
+  return usernames[randomIndex];
+};
+const getRandomDate = () => {
+  const startDate = new Date(2010, 0, 1); // Start date for random date range
+  const endDate = new Date(); // Current date as the end date
+  const randomTimestamp = Math.random() * (endDate.getTime() - startDate.getTime()) + startDate.getTime();
+  const randomDate = new Date(randomTimestamp);
+  return randomDate.toDateString();
+};
+
+const randomDate = getRandomDate();
+
+const randomUsername = getRandomUsername();
+
+const randomImage = getRandomImage();
+
   return (
     <div className="bg-white lg:px-20">
       <div className="pt-6">
@@ -163,6 +211,22 @@ export default function ProductDetails() {
           {/* Product info */}
           <div className="lg:col-span-1 mx-auto max-w-2xl px-4 pb-16 sm:px-6  lg:max-w-7xl  lg:px-8 lg:pb-24">
             <div className="lg:col-span-2">
+            <div style={{ display: "flex", alignItems: "center" }}>
+      <Avatar
+        className="text-white"
+        // onClick={handleUserClick}
+        sx={{
+          color: "white",
+          cursor: "pointer",
+        }}
+      >
+        <img src={randomImage} alt="" />
+      </Avatar>
+      <div style={{marginLeft: "10px"}}>
+        <p>{randomUsername}</p>
+        <p style={{ fontSize: "10px", opacity: 0.65 }}>Uploaded at {randomDate}</p>
+      </div>
+    </div>
               <h1 className="text-lg lg:text-xl font-semibold tracking-tight text-gray-900  ">
                 {customersProduct.product?.brand}
               </h1>

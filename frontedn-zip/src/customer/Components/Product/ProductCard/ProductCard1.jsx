@@ -81,7 +81,7 @@ const randomImage = getRandomImage();
       >
         <img src={randomImage} alt="" />
       </Avatar>
-      <div>
+      <div style={{marginLeft: "5px"}}>
         <p>{randomUsername}</p>
         <p style={{ fontSize: "10px", opacity: 0.65 }}>Uploaded at {randomDate}</p>
       </div>
