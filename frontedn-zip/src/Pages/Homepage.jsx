@@ -22,8 +22,8 @@ const Homepage = () => {
           <img src="https://images.pexels.com/photos/18946632/pexels-photo-18946632/free-photo-of-sole-of-sports-shoe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
           <h1>Sales</h1>
         </div>
-        <HomeProductSection data={mensShoesPage1} />
-        <HomeProductSection data={sareePage1} section={"Dresses"} />
+        <HomeProductSection data={mensShoesPage1} section={"Dresses"}/>
+        <HomeProductSection data={mens_kurta} section={"Dresses"} />
         <div className="banner">
           <img src="https://images.pexels.com/photos/833052/pexels-photo-833052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
           <h1>Sales</h1>

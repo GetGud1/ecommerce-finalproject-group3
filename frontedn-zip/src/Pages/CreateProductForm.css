@@ -29,3 +29,26 @@
     transform: scale(1.1);
     transition: .2s ease-in-out;
 }
+
+.notF{
+    margin-top: 5%;
+    font-size: 5rem;
+    color: tomato;
+}
+
+.Sorry{
+    font-size: 2rem;
+}
+
+.Page{
+    font-size: 1rem;
+}
+
+.home{
+    font-size: 1rem;
+}
+.home:hover{
+    transform: scale(1.25);
+    color: tomato;
+    transition: .2s ease-out;
+}

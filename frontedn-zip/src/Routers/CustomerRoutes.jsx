@@ -32,6 +32,7 @@ import Augment5 from "../Pages/augment5";
 import Augment6 from "../Pages/augment6";
 import ProductDetailsGlasses from "../customer/Components/Product/ProductDetails/ProductDetailsGlasses";
 import ProductDetailsMP from "../customer/Components/Product/ProductDetails/ProductDetailsMP";
+import NotFound from "../Pages/Notfound";
 
 
 
@@ -65,6 +66,8 @@ const CustomerRoutes = () => {
         <Route path="/terms-condition" element={<TearmsCondition />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/:lavelOne/:lavelTwo/:lavelThree" element={<Product />}></Route>
+        <Route path="/:lavelThree" element={<Product />}></Route>
+        <Route path="/:lavelTwo" element={<Product />}></Route>
         <Route path="/product/:productId" element={<ProductDetails />}></Route>
         <Route path="/productGlasses/:productId" element={<ProductDetailsGlasses />}></Route>
         <Route path="/productMP/:productId" element={<ProductDetailsMP />}></Route>
@@ -81,6 +84,7 @@ const CustomerRoutes = () => {
         <Route path="/augmentJean" element={<Augment4 />}></Route>
         <Route path="/augmentSeater" element={<Augment5 />}></Route>
         <Route path="/augmentJacket" element={<Augment6 />}></Route>
+        <Route path="/notfound" element={<NotFound/>} ></Route>
 
         {/* {productId === "663b87e11a802b3d1aaf045b" && (
     <a href="/augment">Augmented reality</a>

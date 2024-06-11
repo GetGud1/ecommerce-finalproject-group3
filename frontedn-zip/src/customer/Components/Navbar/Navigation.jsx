@@ -16,6 +16,7 @@ import { deepOrange } from "@mui/material/colors";
 import { getUser, logout } from "../../../Redux/Auth/Action";
 import { getCart } from "../../../Redux/Customers/Cart/Action";
 import "./navstyle.css";
+import NotFound from "../../../Pages/Notfound";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -76,6 +77,22 @@ export default function Navigation() {
     handleCloseUserMenu()
     navigate("/account/order")
   }
+
+  const [userInput, setUserInput] = useState('');
+
+  const handleInputChange = (event) => {
+    setUserInput(event.target.value);
+  };
+
+  const handleButtonClick = () => {
+    if (userInput === 'shirt' || userInput === 'jacket' || userInput === 'jeans') {
+      window.location.href = `http://localhost:3000/${userInput}`;
+    } else {
+      navigate('/notfound');
+    }
+  };
+
+  
 
   return (
     <div classNames="fullname bg-white pb-10">
@@ -270,22 +287,21 @@ export default function Navigation() {
 
               {/* Flyout menus */}
               <div className="w-full max-w-xl flex mx-auto p-20 text-l">
-            <input
-                type="text"
-                className="w-full placeholder-gray-400 text-gray-900 p-4"
-                placeholder="Search"
-            />
-            <button className=" p-1">
-            <div className="flex lg:ml-6">
-                  <p className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <MagnifyingGlassIcon
-                      className="h-4 w-4"
-                      aria-hidden="true"
-                    />
-                  </p>
-                </div>
-            </button>
+              <input
+        type="text"
+        className="w-full placeholder-gray-400 text-gray-900 p-4"
+        placeholder="Search"
+        value={userInput}
+        onChange={handleInputChange}
+      />
+      <button className="p-1" onClick={handleButtonClick}>
+        <div className="flex lg:ml-6">
+          <p className="p-2 text-gray-400 hover:text-gray-500">
+            <span className="sr-only">Search</span>
+            <MagnifyingGlassIcon className="h-4 w-4" aria-hidden="true" />
+          </p>
+        </div>
+      </button>
         </div>
 
               <div className="ml-auto flex items-center">
