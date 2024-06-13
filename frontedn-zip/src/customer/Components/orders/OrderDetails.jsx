@@ -88,7 +88,7 @@ const OrderDetails = () => {
                     <span>Color: pink</span> <span>Size: {item.size}</span>
                   </p>
                   <p>Seller: {item.product.brand}</p>
-                  <p>₹{item.price} </p>
+                  <p>${item.price} </p>
                 </div>
               </div>
             </Grid>

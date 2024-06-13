@@ -1,4 +1,0 @@
-deployed link
-
-frontend:- https://ecommerce-codewithzosh.vercel.app/
-backend :- https://pear-poised-hen.cyclic.app/
