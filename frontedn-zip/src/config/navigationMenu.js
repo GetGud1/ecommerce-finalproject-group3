@@ -29,7 +29,6 @@ export const navigation = {
               { name: 'Men Jeans', id: 'men_jeans' },
               { name: 'Sweaters', id: 'sweater' },
               { name: 'Jackets', id: 'jacket' },
-              { name: 'Test', id: 'test' },
             ],
           },
           {
@@ -80,9 +79,10 @@ export const navigation = {
     ],
     pages: [
       { name: 'Home', id: '/', href:'/'},
-      { name: 'Retail', id: '/', href:'/Sales' },
       { name: 'Marketplace', id: '/', href:'/marketplace' },
       { name: 'Trending', id: '/', href:'/trending' },
+      { name: 'Deals', id: '/', href:'/deals' },
+      { name: 'Sales', id: '/', href:'/Sales' },
       { name: 'Upload to Marketplace', id: '/', href:'/vendor' }
     ],
   }
