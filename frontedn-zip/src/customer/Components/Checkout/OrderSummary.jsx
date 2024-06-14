@@ -13,22 +13,27 @@ const OrderSummary = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-const orderId = searchParams.get("order_id");
-const dispatch=useDispatch();
+  const orderId = searchParams.get("order_id");
+  const dispatch=useDispatch();
   const jwt=localStorage.getItem("jwt");
   const {order}=useSelector(state=>state)
 
-console.log("orderId ", order)
+  console.log("orderId ", order)
 
-useEffect(()=>{
-  
-  dispatch(getOrderById(orderId))
-},[orderId])
+  useEffect(()=>{
+    
+    dispatch(getOrderById(orderId))
+  },[orderId])
 
-const handleCreatePayment=()=>{
-  const data={orderId:order.order?._id,jwt}
-  dispatch(createPayment(data))
-}
+  const handleCreatePayment=()=>{
+    // const data={orderId:order.order?._id,jwt}
+    // dispatch(createPayment(data))
+    navigate('/Paymentpage')
+  }
+
+  const handleSubmit=()=> {
+    navigate('/Paymentpage')
+  }
   
 
   return (
@@ -72,11 +77,11 @@ const handleCreatePayment=()=>{
             </div>
 
 
-            <form action={`/payment/${orderId}`} className="inline">
-        <button onClick={handleCreatePayment} className="buttoninnit">
-          Payment
-        </button>
-      </form>
+            <form className="inline">
+              <button onClick={handleCreatePayment} className="buttoninnit">
+                Payment
+              </button>
+            </form>
           </div>
         </div>
       </div>

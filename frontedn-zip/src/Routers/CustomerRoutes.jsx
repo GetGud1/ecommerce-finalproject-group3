@@ -33,6 +33,7 @@ import Augment6 from "../Pages/augment6";
 import ProductDetailsGlasses from "../customer/Components/Product/ProductDetails/ProductDetailsGlasses";
 import ProductDetailsMP from "../customer/Components/Product/ProductDetails/ProductDetailsMP";
 import NotFound from "../Pages/Notfound";
+import PaymentPage from "../customer/Components/Checkout/PaymentPage";
 
 
 
@@ -85,6 +86,7 @@ const CustomerRoutes = () => {
         <Route path="/augmentSeater" element={<Augment5 />}></Route>
         <Route path="/augmentJacket" element={<Augment6 />}></Route>
         <Route path="/notfound" element={<NotFound/>} ></Route>
+        <Route path="/PaymentPage" element={<PaymentPage/>} ></Route>
 
         {/* {productId === "663b87e11a802b3d1aaf045b" && (
     <a href="/augment">Augmented reality</a>
