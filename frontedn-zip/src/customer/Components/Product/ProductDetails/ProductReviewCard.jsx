@@ -23,7 +23,7 @@ const ProductReviewCard = ({item}) => {
           <div className="space-y-2">
             <div className="">
               <p className="font-semibold text-lg">{item.user?.firstName}</p>
-              <p className="opacity-70">April 5, 2023</p>
+              <p className="opacity-70">{item.createdAt.slice(0, 10)}</p>
             </div>
             <div>
             
