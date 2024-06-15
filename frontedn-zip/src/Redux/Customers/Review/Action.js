@@ -74,24 +74,24 @@ export const createRating = (resData) => {
   };
 };
 
-export const getAllRatings = (productId) => {
-  // console.log("product id review ",productId)
-  return async (dispatch) => {
-    try {
-      const response = await api.get(`/api/ratings/product/${productId}`, {
+// export const getAllRatings = (productId) => {
+//   // console.log("product id review ",productId)
+//   return async (dispatch) => {
+//     try {
+//       const response = await api.get(`/api/ratings/product/${productId}`, {
        
-      });
+//       });
 
-      dispatch({
-        type: GET_ALL_RATINGS_SUCCESS,
-        payload: response.data
-      });
-      console.log("all rating ",response.data)
-    } catch (error) {
-      dispatch({
-        type: GET_ALL_RATINGS_FAILURE,
-        payload: error.message
-      });
-    }
-  };
-};
+//       dispatch({
+//         type: GET_ALL_RATINGS_SUCCESS,
+//         payload: response.data
+//       });
+//       console.log("all rating ",response.data)
+//     } catch (error) {
+//       dispatch({
+//         type: GET_ALL_RATINGS_FAILURE,
+//         payload: error.message
+//       });
+//     }
+//   };
+// };

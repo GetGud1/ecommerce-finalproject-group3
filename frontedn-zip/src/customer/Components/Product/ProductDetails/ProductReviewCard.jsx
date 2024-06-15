@@ -3,7 +3,7 @@ import { Avatar } from "@mui/material";
 import { Rating, Box, Typography, Grid } from "@mui/material";
 
 const ProductReviewCard = ({item}) => {
-  const [value, setValue] = React.useState(4.5);
+  const [value, setValue] = React.useState(5);
   return (
     <div className="">
       <Grid container spacing={2} gap={3}>

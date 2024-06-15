@@ -22,7 +22,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\":\"Ashok\",\r\n    \"lastName\":\"Code\",\r\n    \"email\":\"codewithzosh@gmail.com\",\r\n    \"password\":\"12345678\"\r\n   \r\n}",
+					"raw": "{\r\n    \"firstName\":\"Ashok\",\r\n    \"lastName\":\"Code\",\r\n    \"email\":\"codewithus@gmail.com\",\r\n    \"password\":\"12345678\"\r\n   \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
