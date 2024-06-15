@@ -84,6 +84,7 @@ const jwt=localStorage.getItem("jwt")
     e.preventDefault();
     dispatch(createProduct({data:productData,jwt}))
     console.log(productData);
+    alert("Item Added!");
   };
 
   // const handleAddProducts=(data)=>{

@@ -93,6 +93,7 @@ export const createProduct = (product) => async (dispatch) => {
     });
 
     console.log("created product ", data);
+    alert("Item Added!");
   } catch (error) {
     dispatch({
       type: CREATE_PRODUCT_FAILURE,

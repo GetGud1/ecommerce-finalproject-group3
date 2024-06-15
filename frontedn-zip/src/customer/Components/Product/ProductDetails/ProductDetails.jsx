@@ -203,9 +203,9 @@ export default function ProductDetails() {
                     readOnly
                   />
 
-                  <p className="opacity-60 text-sm">42807 Ratings</p>
+                  <p className="opacity-60 text-sm">{review.reviews.length} Ratings</p>
                   <p className="ml-3 text-sm font-medium text-orange-300 hover:text-indigo-500">
-                    {reviews.totalCount} reviews
+                    {review.reviews.length} reviews
                   </p>
                 </div>
               </div>

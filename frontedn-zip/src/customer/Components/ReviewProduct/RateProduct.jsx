@@ -80,7 +80,7 @@ const RateProduct = () => {
             <div className="flex items-center space-x-3">
               <Rating name="read-only" value={4.6} precision={0.5} readOnly />
 
-              <p className="opacity-60 text-sm">42807 Ratings</p>
+              <p className="opacity-60 text-sm">20 Ratings</p>
               <p className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
                 {3789} reviews
               </p>
