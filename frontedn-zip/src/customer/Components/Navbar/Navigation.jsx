@@ -44,6 +44,7 @@ export default function Navigation() {
     setAnchorEl(event.currentTarget);
   };
   const handleCloseUserMenu = (event) => {
+    console.log("user:", auth.user)
     setAnchorEl(null);
   };
 
@@ -343,8 +344,10 @@ export default function Navigation() {
                           "aria-labelledby": "basic-button",
                         }}
                       >
-                        <MenuItem onClick={handleCloseUserMenu}>
+                        <MenuItem  >
+                        <a href="/profile">
                           Profile
+                          </a>
                         </MenuItem>
                         
                         <MenuItem onClick={handleMyOrderClick}>

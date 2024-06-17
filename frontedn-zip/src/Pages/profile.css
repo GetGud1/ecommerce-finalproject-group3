@@ -1,0 +1,68 @@
+h2{
+    font-size: 1.5rem;
+    color: tomato;
+}
+h2 span{
+    color: gray;
+}
+
+.wrapper{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.Img{
+    padding-top: 5rem;
+    margin-bottom: -3rem;
+}
+
+.Avatar{
+    color: white;
+    height: 150px;
+    width: 150px;
+}
+
+.home{
+    color: gray;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+
+}
+
+.home:hover{
+    color: tomato;
+    
+}
+
+  
+
+/* 
+{
+    "_id": "66310aae07c7cbe54c19b2ba",
+    "firstName": "testing ",
+    "lastName": "testing",
+    "password": "$2b$08$enWOjGvm3D9DRDXK2Bn6G.Vj4z661u1ij4WjFQ434zopejZrCxm/a",
+    "email": "testing@gmail.com",
+    "role": "CUSTOMER",
+    "addresses": [
+        {
+            "_id": "666dab481b108cacea2ebc0b",
+            "firstName": "Aaron",
+            "lastName": "Test",
+            "streetAddress": "123 Street",
+            "city": "Hong Kong",
+            "state": "Hong Kong",
+            "zipCode": "123",
+            "mobile": "9876",
+            "user": "66310aae07c7cbe54c19b2ba",
+            "__v": 0
+        }
+    ],
+    "paymentInformation": [],
+    "ratings": [],
+    "reviews": [],
+    "createdAt": "2024-04-30T15:09:53.011Z",
+    "__v": 8
+} 
+*/
