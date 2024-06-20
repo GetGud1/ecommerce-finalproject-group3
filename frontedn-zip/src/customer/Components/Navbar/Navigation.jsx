@@ -17,6 +17,7 @@ import { getUser, logout } from "../../../Redux/Auth/Action";
 import { getCart } from "../../../Redux/Customers/Cart/Action";
 import "./navstyle.css";
 import NotFound from "../../../Pages/Notfound";
+import { API_BASE_URL } from "../../../config/api";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -89,7 +90,7 @@ export default function Navigation() {
 
     let convertedInput = userInput.toLowerCase().replace(' ', '_');
     if (convertedInput === 'men_jeans' || convertedInput === 'women_jeans' || convertedInput === 'women_jacket' || convertedInput === 'women_dress' || userInput ==='shirt' || userInput ==='sweater' || userInput ==='jacket' || userInput ==='shirt' || userInput ==='top' || userInput ==='t-shirt' || userInput ==='watch' || userInput ==='wallet' || userInput ==='bag' || userInput ==='sunglasses' || userInput ==='belt') {
-      window.location.href = `http://https://urbanshopper.vercel.app/${convertedInput}`;
+      window.location.href = `/${convertedInput}`;
     } else {
       navigate('/notfound');
     }
