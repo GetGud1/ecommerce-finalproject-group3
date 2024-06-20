@@ -3,6 +3,18 @@ const cors=require('cors');
 
 const app=express();
 
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods:["POST", "GET", "PUT", "DELETE"],
+        credentials: true
+    }
+));
+
+app.get("/",(req,res)=>{
+    res.json("TESTING HOST")
+})
+
 app.use(express.json())
 app.use(cors())
 
@@ -21,7 +33,7 @@ const productRouter=require("./routes/product.routes.js");
 app.use("/api/products",productRouter);
 
 
-
+//AAron
 const cartRouter=require("./routes/cart.routes.js")
 app.use("/api/cart", cartRouter);
 
@@ -34,12 +46,18 @@ app.use("/api/orders",orderRouter);
 const paymentRouter=require("./routes/payment.routes.js");
 app.use('/api/payments',paymentRouter)
 
+
+
+
 const reviewRouter=require("./routes/review.routes.js");
 app.use("/api/reviews",reviewRouter);
-// localhost:5454/api//review
 
 const ratingRouter=require("./routes/rating.routes.js");
 app.use("/api/ratings",ratingRouter);
+
+
+
+
 
 // admin routes handler
 

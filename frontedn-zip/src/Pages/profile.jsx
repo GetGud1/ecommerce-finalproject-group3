@@ -67,7 +67,7 @@ const Profile = () => {
       ) : (
         <p>Loading...</p>
       )}
-      <a className='home' href="/">&lt; Home</a>
+      <a className='home' href="/"><span className='span'>&lt;</span> Home</a>
     </div>
     
   );

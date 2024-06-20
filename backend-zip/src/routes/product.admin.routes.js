@@ -8,6 +8,8 @@ router.post('/', productController.createProduct);
 //Pawan
 router.post('/creates', productController.createMultipleProduct);
 router.delete('/:id', productController.deleteProduct);
+
+//In progress
 router.put('/:id', productController.updateProduct);
 
 module.exports=router;

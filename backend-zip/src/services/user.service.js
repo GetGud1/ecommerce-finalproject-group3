@@ -8,18 +8,19 @@ const createUser = async (userData)=>{
 
         let {firstName,lastName,email,password,role}=userData;
 
+        //Check if the user email exits
         const isUserExist=await User.findOne({email});
 
-
+        //Thow error if the user exists in the database
         if(isUserExist){
             throw new Error("user already exist with email : ",email)
         }
 
+        //The hashing of the password, more hashes = more secure
         password=await bcrypt.hash(password,8);
-    
+        
+        //Create a new user with the data for the fields
         const user=await User.create({firstName,lastName,email,password,role})
-
-        console.log("user ",user)
     
         return user;
         
