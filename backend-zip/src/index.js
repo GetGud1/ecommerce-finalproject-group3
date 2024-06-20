@@ -3,17 +3,7 @@ const cors=require('cors');
 
 const app=express();
 
-app.use(cors(
-    {
-        origin: ["https://deploy-mern-1whq.vercel.app"],
-        methods:["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-));
 
-app.get("/",(req,res)=>{
-    res.json("TESTING HOST")
-})
 
 app.use(express.json())
 app.use(cors())
