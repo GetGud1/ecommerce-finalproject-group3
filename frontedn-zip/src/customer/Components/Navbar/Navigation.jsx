@@ -89,7 +89,7 @@ export default function Navigation() {
 
     let convertedInput = userInput.toLowerCase().replace(' ', '_');
     if (convertedInput === 'men_jeans' || convertedInput === 'women_jeans' || convertedInput === 'women_jacket' || convertedInput === 'women_dress' || userInput ==='shirt' || userInput ==='sweater' || userInput ==='jacket' || userInput ==='shirt' || userInput ==='top' || userInput ==='t-shirt' || userInput ==='watch' || userInput ==='wallet' || userInput ==='bag' || userInput ==='sunglasses' || userInput ==='belt') {
-      window.location.href = `http://localhost:3000/${convertedInput}`;
+      window.location.href = `http://https://urbanshopper.vercel.app/${convertedInput}`;
     } else {
       navigate('/notfound');
     }
