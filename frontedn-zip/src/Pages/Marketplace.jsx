@@ -37,7 +37,7 @@ import React from "react";
 import ProductCard1 from "../customer/Components/Product/ProductCard/ProductCard1";
 import { productdata } from "./data";
 import MenuIcon from '@mui/icons-material/Menu';
-
+import api, { API_BASE_URL } from "../config/api";
 
 
  
@@ -52,7 +52,7 @@ const Marketplace = () => {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5454/api/products?category=other1', {
+    fetch(API_BASE_URL+'/api/products?category=other1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -70,7 +70,7 @@ const Marketplace = () => {
 
   const fetchNextPage = () => {
     const nextPageSize = productData.length + 10; // Increase the pageSize by 1
-    const apiUrl = `http://localhost:5454/api/products?category=other1&pageSize=${nextPageSize}`;
+    const apiUrl = API_BASE_URL+`/api/products?category=other1&pageSize=${nextPageSize}`;
   
     fetch(apiUrl, {
       method: 'GET',
