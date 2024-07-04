@@ -23,6 +23,14 @@ const userSchema = new mongoose.Schema({
     required:true,
     default:"CUSTOMER"
   },
+  age: {
+    type: String,
+    required:true,
+  },
+  gender: {
+    type: String,
+    required:true,
+  },
   mobile: {
     type: String,
   },

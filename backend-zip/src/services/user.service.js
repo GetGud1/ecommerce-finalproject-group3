@@ -6,7 +6,7 @@ const jwtProvider=require("../config/jwtProvider")
 const createUser = async (userData)=>{
     try {
 
-        let {firstName,lastName,email,password,role}=userData;
+        let {firstName,lastName,email,password,role,age,gender}=userData;
 
         //Check if the user email exits
         const isUserExist=await User.findOne({email});
@@ -20,7 +20,7 @@ const createUser = async (userData)=>{
         password=await bcrypt.hash(password,8);
         
         //Create a new user with the data for the fields
-        const user=await User.create({firstName,lastName,email,password,role})
+        const user=await User.create({firstName,lastName,email,password,role,age,gender})
     
         return user;
         

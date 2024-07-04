@@ -12,6 +12,8 @@ import "./banner.css";
 
 const Homepage = () => {
 
+  
+
   return (
     <div className="">
       <HomeCarousel images={homeCarouselData} />

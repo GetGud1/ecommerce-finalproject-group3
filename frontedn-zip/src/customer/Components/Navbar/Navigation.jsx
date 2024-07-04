@@ -62,6 +62,10 @@ export default function Navigation() {
     close();
   };
 
+  const handleCategoryClickMobile = (category, section, item) => {
+    navigate(`/${category.id}/${section.id}/${item.id}`);
+  };
+
   useEffect(() => {
     if (auth.user){ 
       handleClose();
@@ -209,8 +213,16 @@ export default function Navigation() {
                             >
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
-                                  <p className="-m-2 block p-2 text-gray-500">
-                                    {"item.name"}
+                                  <p className="-m-2 block p-2 text-gray-500" 
+                                  onClick={() =>
+                                    handleCategoryClickMobile(
+                                    category,
+                                    section,
+                                    item,
+                                    setOpen(false))
+                                    }
+                                  >
+                                    {item.name}
                                   </p>
                                 </li>
                               ))}
@@ -238,26 +250,12 @@ export default function Navigation() {
                 <div className=" space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
                     <a
-                      href="/"
+                      onClick={handleOpen}
                       className=" -m-2  block p-2 font-medium text-gray-900"
                     >
                       Sign in
                     </a>
                   </div>
-                </div>
-
-                <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="/" className="-m-2 flex items-center p-2">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-base font-medium text-gray-900">
-                      CAD
-                    </span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
