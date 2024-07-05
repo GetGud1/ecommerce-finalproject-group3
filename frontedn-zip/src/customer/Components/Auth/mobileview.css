@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .regformdiv {
+        max-width: 90vw !important;
+        margin: 0 auto;
+    }
+    .loginformdiv {
+        max-width: 90vw !important;
+        margin: 0 auto;
+    }
+}

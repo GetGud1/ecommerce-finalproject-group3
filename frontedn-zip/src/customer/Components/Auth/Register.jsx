@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, register } from "../../../Redux/Auth/Action";
 import { useEffect, useState } from "react";
+import "./mobileview.css";
 
 export default function RegisterUserForm({ handleNext }) {
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ export default function RegisterUserForm({ handleNext }) {
   };
 
   return (
-    <div className="">
+    <div className="regformdiv">
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>

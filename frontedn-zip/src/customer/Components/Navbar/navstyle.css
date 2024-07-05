@@ -15,5 +15,22 @@
 
 .linkinnit:hover {
     color: tomato;
-  }
+}
 
+
+@media (max-width: 768px) {
+    .navbardiv {
+        padding: 0px;
+        max-width: 100vw;
+    }
+    .sitelogo {
+        max-width: none !important;
+        margin: 0 !important;
+    }
+    .searchbardiv {
+        padding: 2px;
+    }
+    .searchiconmenu {
+        display: none;
+    }
+}

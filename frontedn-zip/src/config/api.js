@@ -3,7 +3,7 @@ import axios from 'axios';
 const DEPLOYED='https://ecommerce-finalproject-group3.onrender.com'
 const LOCALHOST='http://localhost:5454'
 
-export const API_BASE_URL = DEPLOYED;
+export const API_BASE_URL = LOCALHOST;
 
 const api = axios.create({
   baseURL: API_BASE_URL,

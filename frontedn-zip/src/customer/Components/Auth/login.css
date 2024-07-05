@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .formdiv {
+        max-width: 90vw !important;
+        margin: 0 auto;
+    }
+}

@@ -272,7 +272,7 @@ export default function Navigation() {
 
       <nav aria-label="Top" className="mx-auto">
           <div className="border-b border-gray-200">
-            <div className="flex h-16 items-center px-11">
+            <div className="flex h-16 items-center px-11 navbardiv">
 
 
               {/* Logo */}
@@ -282,13 +282,13 @@ export default function Navigation() {
                   <img
                     src="../images/logos/image.png"
                     alt="URBANSHOPPER"
-                    className="h-8 w-18 mr-2"
+                    className="h-8 w-18 mr-2 sitelogo"
                   />
                 </Link>
               </div>
 
               {/* Flyout menus */}
-              <div className="w-full max-w-xl flex mx-auto p-20 text-l">
+              <div className="w-full max-w-xl flex mx-auto p-20 text-l searchbardiv">
               <input
         type="text"
         className="w-full placeholder-gray-400 text-gray-900 p-4"
@@ -309,7 +309,7 @@ export default function Navigation() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {auth.user ? (
-                    <div>
+                    <div className="avatardiv">
                       <Avatar
                         className="text-white"
                         onClick={handleUserClick}
@@ -367,7 +367,7 @@ export default function Navigation() {
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <p className="p-2 text-gray-400 hover:text-gray-500">
+                  <p className="p-2 text-gray-400 hover:text-gray-500 searchiconmenu">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon
                       className="h-6 w-6"
