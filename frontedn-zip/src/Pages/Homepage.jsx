@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { API_BASE_URL } from '../config/api';
 import HomeProductSection from '../customer/Components/Home/HomeProductSection';
+import { homeCarouselData } from "../customer/Components/Carousel/HomeCaroselData";
 
 // Import default data
 import { sareePage1 } from "../Data/Saree/page1";
@@ -163,7 +164,16 @@ const Homepage = () => {
 
   return (
     <div className="">
-      <HomeCarousel1 images={ImgBanner} />
+      
+      {isLoggedIn ? (
+          <>
+          <HomeCarousel1 images={ImgBanner} />
+          </>
+        ) : (
+          <>
+          <HomeCarousel1 images={homeCarouselData} />
+          </>
+        )}
       <div className="space-y-10 py-20">
         {isLoggedIn ? (
           <>
