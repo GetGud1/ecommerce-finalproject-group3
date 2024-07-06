@@ -3,7 +3,9 @@ import { Avatar } from "@mui/material";
 import { Rating, Box, Typography, Grid } from "@mui/material";
 
 const ProductReviewCard = ({item}) => {
-  const [value, setValue] = React.useState(5);
+  const [value, setValue] = React.useState(4.5);
+  const currentDate = new Date();
+  const formattedDate = currentDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   return (
     <div className="">
       <Grid container spacing={2} gap={3}>
@@ -23,7 +25,7 @@ const ProductReviewCard = ({item}) => {
           <div className="space-y-2">
             <div className="">
               <p className="font-semibold text-lg">{item.user?.firstName}</p>
-              <p className="opacity-70">{item.createdAt.slice(0, 10)}</p>
+              <p className="opacity-70">{formattedDate}</p>
             </div>
             <div>
             
