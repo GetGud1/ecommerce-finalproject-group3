@@ -3,9 +3,136 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { getOrders } from '../Redux/Admin/Orders/Action';
 import { API_BASE_URL } from '../config/api';
-import HomeCarousel from '../customer/Components/Carousel/HomeCarousel';
-import { homeCarouselData } from '../customer/Components/Carousel/HomeCaroselData';
 import HomeProductSection from '../customer/Components/Home/HomeProductSection';
+
+
+//Men
+import shirt from './sectionImg/shirtMenInnit.jpg';
+import men_jeans from './sectionImg/jeansmen.jpg';
+import sweater from './sectionImg/sweater.jpg';
+import jacket from './sectionImg/jacket.jpg';
+
+//Women
+import top from './sectionImg/tops.jpg';
+import women_jacket from './sectionImg/Wjacket.jpg';
+import women_jeans from './sectionImg/Wjeans.jpg';
+import t_shirt from './sectionImg/Wtshirt.jpg';
+import women_dress from './sectionImg/dresswomen.jpg';
+
+//Acc
+import backpack from './sectionImg/backpack.jpg';
+import belt from './sectionImg/belt.jpg';
+import sunglasses from './sectionImg/sunglassesImg.jpg';
+import wallets from './sectionImg/wallets.jpg';
+import watch from './sectionImg/watches.jpg';
+
+
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import { useNavigate } from "react-router-dom";
+import { SwapVertSharp } from '@mui/icons-material';
+
+const prodImg=[
+  {
+      image:men_jeans,
+      path:"/men/mens%20clothing/men_jeans",
+      className:"men_jeans"
+  },
+  {
+      image:shirt,
+      path:"/shirt",
+      className:"shirt"
+  },
+  {
+      image:sweater,
+      path:"/sweater",
+      className:"sweate"
+  },
+  {
+      image:jacket,
+      path:"/jacket",
+      className:"jacket"
+  },
+  {
+    image:top,
+    path:"/top",
+    className:"top"
+  },{
+    image:women_jacket,
+    path:"/women_jacket",
+    className:"women_jacket"
+  },
+  {
+    image:women_jeans,
+    path:"/women_jeans",
+    className:"women_jeans"
+  },
+  {
+    image:t_shirt,
+    path:"/t-shirt",
+    className:"t-shirt"
+  },
+  {
+    image:women_dress,
+    path:"/women_dress",
+    className:"women_dress"
+  },
+  {
+    image:backpack,
+    path:"/bag",
+    className:"bag"
+  },
+  {
+    image:belt,
+    path:"/belt",
+    className:"belt"
+  },
+  {
+    image:sunglasses,
+    path:"/sunglasses",
+    className:"sunglasses"
+  },
+  {
+    image:wallets,
+    path:"/wallet",
+    className:"wallets"
+  },
+  {
+    image:watch,
+    path:"/watch",
+    className:"watch"
+  },
+]
+const ImgBanner = [];
+
+
+
+const handleDragStart = (e) => e.preventDefault();
+
+const HomeCarousel1 = () => {
+  const navigate = useNavigate();
+  const item = ImgBanner.map((item) => (
+    <img
+      className="cursor-pointer"
+      onClick={() => navigate(item.path)}
+      src={item.image}
+      alt=""
+      onDragStart={handleDragStart}
+      role="presentation"
+    />
+  ));
+  return (
+    <AliceCarousel
+      mouseTracking
+      items={item}
+      autoPlay
+      infinite
+      autoPlayInterval={2000}
+      disableButtonsControls
+      disableDotsControls
+    />
+  );
+};
 
 const ageGroups = [
   { name: 'teen', range: [13, 19] },
@@ -30,6 +157,8 @@ const Homepage = () => {
   const [bestSelling, setBestSelling] = useState([]);
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
+
+  
 
   useEffect(() => {
     if (jwt) {
@@ -101,6 +230,7 @@ const Homepage = () => {
           console.log("=========??????????========", bestSellingProducts.slice(0, 10));
         }
 
+
         fetchBestSellingProducts();
 
         const allRandomProducts = await Promise.all(
@@ -119,6 +249,16 @@ const Homepage = () => {
           })
         );
 
+        for(let i = 0; i < productCats.length; i++ ){
+          prodImg.forEach(item => {
+            if(productCats[i]==item.className){
+              ImgBanner.push(item)
+            }
+          });
+        }
+
+        console.log("_!@#!O@%$#PO^%$%^OP@O{#@R<EMWLG FDSG MD", ImgBanner)
+
         setRandomProductsByCategory(allRandomProducts);
 
       } catch (error) {
@@ -133,7 +273,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <HomeCarousel images={homeCarouselData} />
+      <HomeCarousel1 images={prodImg} />
 
       <div className="space-y-10 py-20">
         <HomeProductSection data={bestSelling} section="Top 10 Products" />
@@ -176,3 +316,7 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+
+
+
