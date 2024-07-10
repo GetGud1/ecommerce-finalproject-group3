@@ -24,6 +24,7 @@ function classNames(...classes) {
 }
 
 export default function Navigation() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ export default function Navigation() {
 
   useEffect(() => {
     if (jwt) {
+      setIsLoggedIn(true);
       dispatch(getUser(jwt));
       dispatch(getCart(jwt));
     }
@@ -249,12 +251,23 @@ export default function Navigation() {
 
                 <div className=" space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a
-                      onClick={handleOpen}
-                      className=" -m-2  block p-2 font-medium text-gray-900"
-                    >
-                      Sign in
-                    </a>
+                    {isLoggedIn ? (
+                      <a
+                        onClick={handleLogout}
+                        className="-m-2 block p-2 font-medium text-gray-900"
+                        href="/"
+                      >
+                        Log Out
+                      </a>
+                    ) : (
+                      <a
+                        onClick={handleOpen}
+                        className="-m-2 block p-2 font-medium text-gray-900"
+                      >
+                        Sign In
+                      </a>
+                    )}
+
                   </div>
                 </div>
               </Dialog.Panel>
@@ -291,7 +304,7 @@ export default function Navigation() {
               <div className="w-full max-w-xl flex mx-auto p-20 text-l searchbardiv">
               <input
         type="text"
-        className="w-full placeholder-gray-400 text-gray-900 p-4"
+        className="search-bar w-full placeholder-gray-400 text-gray-900 p-4"
         placeholder="Search"
         value={userInput}
         onChange={handleInputChange}

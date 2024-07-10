@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { API_BASE_URL } from '../config/api';
 import HomeProductSection from '../customer/Components/Home/HomeProductSection';
+import HomeProductSection1 from '../customer/Components/Home/HomeProductSection1';
 import { homeCarouselData } from "../customer/Components/Carousel/HomeCaroselData";
 
 // Import default data
@@ -165,21 +166,23 @@ const Homepage = () => {
   return (
     <div className="">
       
-      {isLoggedIn ? (
-          <>
+      {isLoggedIn && ImgBanner.length > 0 && (
+        <>
           <HomeCarousel1 images={ImgBanner} />
-          </>
-        ) : (
-          <>
+        </>
+      )}
+      {!isLoggedIn && (
+        <>
           <HomeCarousel1 images={homeCarouselData} />
-          </>
-        )}
+        </>
+      )}
       <div className="space-y-10 py-20">
-        {isLoggedIn ? (
+        {isLoggedIn && targetedContent.length > 0 ? (
           <>
             {targetedContent.map((section, index) => (
-              <HomeProductSection key={index} data={section.products} section={section.category} />
+              <HomeProductSection1 key={index} data={section.products} section={section.category} navigate={section.category} />
             ))}
+
             <div className="banner">
               <img src="https://images.pexels.com/photos/18946632/pexels-photo-18946632/free-photo-of-sole-of-sports-shoe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               <h1>Sales</h1>

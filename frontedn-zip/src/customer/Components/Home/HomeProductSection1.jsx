@@ -32,7 +32,7 @@ const HomeProductSection = ({ section, data, navigate }) => {
       <div className="">
         {" "}
         
-        <HomeProductCard product={item} nav={'/shirt'} />
+        <HomeProductCard product={item} nav={"/"+item.category.name} />
       </div>
   
     ));
